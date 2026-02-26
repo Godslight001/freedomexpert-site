@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" fill="none">
+  <rect width="300" height="300" rx="24" fill="#F3ECFF"/>
+  <circle cx="150" cy="150" r="92" stroke="#6F42C1" stroke-width="14"/>
+  <circle cx="150" cy="150" r="58" stroke="#8A5CF6" stroke-width="10"/>
+  <path d="M136 126c0-12 10-22 22-22s22 10 22 22c0 7-4 14-10 18v20h-24v-20c-6-4-10-11-10-18Z" fill="#4B2E83"/>
+  <text x="150" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#4B2E83">FREEDOM EXPERT</text>
+</svg>

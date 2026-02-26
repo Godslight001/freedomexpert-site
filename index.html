@@ -1,0 +1,376 @@
+﻿<!doctype html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Freedom Expert helps professionals and families build financial confidence, leadership capacity, and long-term stewardship.">
+    <title>Freedom Expert | Living a Life of Abundance</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6F42C1',
+                        'accent-gold': '#C5A059',
+                        charcoal: '#2D2D2D',
+                        'background-light': '#f6f6f8',
+                        'background-dark': '#101622'
+                    },
+                    fontFamily: {
+                        display: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .serif-headline {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .logo-marquee {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+        }
+        
+        .logo-track {
+            display: flex;
+            width: max-content;
+            animation: logo-scroll 36s linear infinite;
+        }
+        
+        .logo-item {
+            display: grid;
+            place-items: center;
+            width: 190px;
+            height: 92px;
+            margin-right: 1rem;
+            border-radius: 1rem;
+            background: #ffffff;
+            border: 1px solid rgba(111, 66, 193, 0.16);
+            flex-shrink: 0;
+        }
+        
+        .logo-item img {
+            max-width: 136px;
+            max-height: 60px;
+            object-fit: contain;
+            filter: saturate(1.08) contrast(1.05);
+        }
+        
+        @keyframes logo-scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .logo-track {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+
+<body data-page="home" class="bg-background-light selection:bg-primary/20">
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-3" href="index.html">
+                <img src="assets/images/freedom-expert-logo.svg" alt="Freedom Expert logo" class="size-10 rounded-lg object-cover border border-primary/20">
+                <h2 class="text-charcoal text-xl font-bold tracking-tight">Freedom Expert</h2>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="index.html" data-nav="home">Home</a>
+                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="about/index.html" data-nav="about">About</a>
+                <div class="relative group">
+                    <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-1" href="resources/index.html" data-nav="resources">Resources <span class="material-symbols-outlined text-base">expand_more</span></a>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block">
+                        <div class="w-52 rounded-xl border border-primary/10 bg-white shadow-xl p-2">
+                            <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="resources/blog.html">Blog</a>
+                            <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="resources/podcast.html">Podcast</a>
+                            <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="resources/books.html">Books</a>
+                            <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="resources/downloads.html">Downloads</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="programs/index.html" data-nav="programs">Programs</a>
+                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="contact/index.html" data-nav="contact">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a class="text-sm font-bold text-charcoal px-4" href="resources/index.html">Login</a>
+                <a class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm" href="contact/index.html">Get Started</a>
+            </div>
+
+            <button class="md:hidden text-charcoal" aria-expanded="false" aria-label="Toggle menu" data-menu-toggle>
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+        </div>
+
+        <ul class="hidden md:hidden px-6 pb-6 space-y-3 border-t border-gray-100" data-nav-links>
+            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium pt-4" href="index.html" data-nav="home">Home</a></li>
+            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="about/index.html" data-nav="about">About</a></li>
+            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="resources/index.html" data-nav="resources">Resources</a></li>
+            <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="resources/blog.html">- Blog</a></li>
+            <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="resources/podcast.html">- Podcast</a></li>
+            <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="resources/books.html">- Books</a></li>
+            <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="resources/downloads.html">- Downloads</a></li>
+            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="programs/index.html" data-nav="programs">Programs</a></li>
+            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="contact/index.html" data-nav="contact">Contact</a></li>
+            <li><a class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm" href="contact/index.html">Get Started</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="relative overflow-hidden pt-16 pb-24 lg:pt-28 lg:pb-36 bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="max-w-xl">
+                    <span class="inline-block text-accent-gold font-bold tracking-widest text-xs uppercase mb-6">Freedom Expert</span>
+                    <h1 class="serif-headline text-charcoal text-5xl lg:text-7xl leading-[1.1] mb-8">Live a Life of Abundance: Spiritual, Mental, Financial, and Social Well-being</h1>
+                    <p class="text-lg text-charcoal/70 leading-relaxed mb-10 max-w-md">Imagine a life where you are thriving spiritually, mentally, financially, and socially. At Freedom Expert, we provide practical tools and proven strategies to help you achieve this balance and unlock your full potential.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="programs/index.html" class="bg-primary text-white px-8 py-4 rounded-lg font-bold text-base hover:shadow-lg transition-shadow text-center">Start Your Journey</a>
+                        <a href="resources/index.html" class="bg-gray-50 text-charcoal px-8 py-4 rounded-lg font-bold text-base hover:bg-gray-100 transition-colors text-center">Explore Resources</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-accent-gold/10 rounded-xl transition-transform group-hover:scale-105 duration-700"></div>
+                    <div class="relative aspect-[4/5] bg-gray-200 rounded-lg overflow-hidden shadow-2xl">
+                        <img alt="Person looking out at mountain landscape" class="w-full h-full object-cover" src="/assets/images/family.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-[#f4efff]">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="text-center mb-8">
+                    <span class="inline-block text-primary/80 font-bold tracking-widest text-xs uppercase mb-3">As Seen In</span>
+                    <h2 class="serif-headline text-3xl md:text-4xl text-charcoal">Freedom Expert Noteworthy Inspirational Mentions</h2>
+                </div>
+                <div class="bg-white rounded-3xl p-5 md:p-6 border border-primary/10">
+                    <div class="logo-marquee" aria-label="Partner and media logos">
+                        <div class="logo-track">
+                            <div class="logo-item"><img src="assets/images/CBN-Logo-Blue.png" alt="CBN Logo"></div>
+                            <div class="logo-item"><img src="assets/images/logo-2.png" alt="Logo 2"></div>
+                            <div class="logo-item"><img src="assets/images/normal-on-white.png" alt="Normal on White logo"></div>
+                            <div class="logo-item"><img src="assets/images/unnamed-1-1.png" alt="Partner logo 1"></div>
+                            <div class="logo-item"><img src="assets/images/unnamed-2.png" alt="Partner logo 2"></div>
+                            <div class="logo-item"><img src="assets/images/unnamed-3.png" alt="Partner logo 3"></div>
+                            <div class="logo-item"><img src="assets/images/CBN-Logo-Blue.png" alt="CBN Logo"></div>
+                            <div class="logo-item"><img src="assets/images/logo-2.png" alt="Logo 2"></div>
+                            <div class="logo-item"><img src="assets/images/normal-on-white.png" alt="Normal on White logo"></div>
+                            <div class="logo-item"><img src="assets/images/unnamed-1-1.png" alt="Partner logo 1"></div>
+                            <div class="logo-item"><img src="assets/images/unnamed-2.png" alt="Partner logo 2"></div>
+                            <div class="logo-item"><img src="assets/images/unnamed-3.png" alt="Partner logo 3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 lg:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="text-center mb-12">
+                    <span class="inline-block text-accent-gold font-bold tracking-widest text-xs uppercase mb-4">Stewardship Perspective</span>
+                    <h2 class="serif-headline text-3xl lg:text-5xl text-charcoal">Money is amoral, it's the God factor that makes it moral</h2>
+                </div>
+
+                <div class="relative overflow-hidden rounded-3xl border border-primary/15 shadow-2xl mb-10">
+                    <img class="w-full h-full object-cover aspect-[16/6]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN949nMzc_0c4TtojVU_A4eJq1wHjyoS5ru3jO8szuEVwnfaVZ1-CgzZ21hxdUVhX0O1KEULm5ksy_osVGQS8vdSqs1X6FwdFqP4DVRDnyyoGzNywg9hOVMuh1lWCnyczFJK1MC-oX2sheXqwktJBzjX9x2ACY0YJwo_usKckchuPX02mpVscrePim1X9FlKAdTjli-1gDhShByAU7bYQkP-G12qggTESVMq4goTceN4cfiLmxwavK90yJoMDbid8zqJq94XLc8aK_"
+                        alt="Financial planning and stewardship visual">
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#24183f]/85 to-[#6f42c1]/45 flex items-end">
+                        <p class="serif-headline text-white text-xl lg:text-3xl p-6 lg:p-10 max-w-3xl">Money, in itself, is neither good nor evil. It is a tool. We imbue it with moral value through our stewardship. By dedicating our resources to God's purposes, we transform a neutral instrument into a means of furthering His kingdom.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl border border-primary/15 bg-white p-6 lg:p-8 shadow-lg">
+                    <div class="space-y-6 text-lg text-charcoal/80 leading-relaxed">
+                        <p>The inherent nature of money is neutral. Its moral character is determined by the intent and purpose with which it is used. When we consecrate our resources to serve God and His purposes, we elevate them to a higher calling.</p>
+                        <p>Money, a mere medium of exchange, possesses no inherent morality. It is through our intentional use of it in service to God that we transform it into an instrument of His divine purpose, reflecting His goodness in the world.</p>
+                        <p>"For the love of money is a root of all kinds of evil" (1 Timothy 6:10), not money itself. Money is a resource, and when consecrated to God's service, it becomes a channel for His blessings. We make it moral by using it purposefully
+                            for His glory.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gradient-to-br from-[#171126] via-[#1f1536] to-[#2a1d49]">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <h2 class="serif-headline text-4xl lg:text-5xl text-white mb-4">How we empower You</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article class="bg-white/10 backdrop-blur-md p-8 lg:p-10 rounded-2xl border border-white/15 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-sm font-bold tracking-[0.2em] text-accent-gold">01</span>
+                            <span class="material-symbols-outlined text-accent-gold">savings</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Imagine achieving your financial goals without constantly worrying about money.</h3>
+                        <p class="text-gray-200/90 leading-relaxed">We specialize in teaching simple, "automate-it" money management methods designed for modern life. Because we believe financial success should be accessible to everyone, we prioritize clarity and ease in our approach. In today's
+                            world, automating your finances is not just smart—it's the most effective way to build a secure future.</p>
+                    </article>
+
+                    <article class="bg-white/10 backdrop-blur-md p-8 lg:p-10 rounded-2xl border border-white/15 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-sm font-bold tracking-[0.2em] text-accent-gold">02</span>
+                            <span class="material-symbols-outlined text-accent-gold">volunteer_activism</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Real financial freedom isn't about extravagant possessions</h3>
+                        <p class="text-gray-200/90 leading-relaxed">it's about the freedom to pursue your God-given purpose. Money is a tool, a resource entrusted to us to fulfill the calling He's placed on our lives. While material comforts can certainly be enjoyed, the true focus remains on seeking
+                            Him first, aligning our resources with His will, and using what He provides to make a lasting impact. We're here to help you discover that kind of freedom—the freedom to live a life of purpose, generously using your resources
+                            to advance His kingdom.</p>
+                    </article>
+
+                    <article class="bg-white/10 backdrop-blur-md p-8 lg:p-10 rounded-2xl border border-white/15 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-sm font-bold tracking-[0.2em] text-accent-gold">03</span>
+                            <span class="material-symbols-outlined text-accent-gold">psychology</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Uncover the hidden financial beliefs that are limiting your potential</h3>
+                        <p class="text-gray-200/90 leading-relaxed">Regardless of your income, inherited financial narratives can often hold us back from achieving our true financial capacity. We'll guide you in dismantling these limiting beliefs, replacing them with empowering truths that will
+                            propel you forward on your journey to financial freedom and unlock the abundant future you were designed for.</p>
+                    </article>
+
+                    <article class="bg-white/10 backdrop-blur-md p-8 lg:p-10 rounded-2xl border border-white/15 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-sm font-bold tracking-[0.2em] text-accent-gold">04</span>
+                            <span class="material-symbols-outlined text-accent-gold">rocket_launch</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Unlock your true potential—because the world needs what you have to offer.</h3>
+                        <p class="text-gray-200/90 leading-relaxed">This journey isn't solely about personal gain. When you're empowered to live your purpose, the world naturally benefits. And, importantly, financial well-being allows you to generously invest in the lives of others, amplifying
+                            your impact on the world around you. That's the transformative power we're committed to helping you unleash.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gradient-to-b from-white to-primary/5">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                    <div class="max-w-xl">
+                        <span class="inline-block text-accent-gold font-bold tracking-widest text-xs uppercase mb-4">Latest Insights</span>
+                        <h2 class="serif-headline text-4xl text-charcoal">Featured Education</h2>
+                    </div>
+                    <a class="text-primary font-bold flex items-center gap-2 hover:underline" href="resources/blog.html">View Editorial Archive <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <a href="resources/blog.html" class="group cursor-pointer">
+                        <div class="relative aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-gray-100"><img alt="Podcast" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQxqelesQnjjvzss0bbyVIMdYimYl9ee1Zu1nX7ajanfr4GghQNXDhrMdyrwBo--vX9lqqfY4U4yylcXxqaN8Prmz4sBTjZqud_XVflAoPP9MOxcG_8jWNZhCDRLsoURG8gybuClOSW8zCbqifX_Hls6n-eHz5qrKQeBuLxkeHH95ImEph9zZBcxGyQOsLYqmCehiVRorA85CZsd5Ns5zsqk0VvIJBVsWannFCHsyBw-6kbErY3tEqWp1PCALnTO8VIn4wrF-dteCE">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase">Blog</div>
+                        </div>
+                        <h4 class="serif-headline text-2xl text-charcoal mb-3 group-hover:text-primary transition-colors line-clamp-2">16 Money Questions</h4>
+                        <p class="text-charcoal/60 text-sm leading-relaxed line-clamp-2">A practical set of questions to reset financial direction and intentional stewardship.</p>
+                    </a>
+                    <a href="resources/blog.html" class="group cursor-pointer">
+                        <div class="relative aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-gray-100"><img alt="Article" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN949nMzc_0c4TtojVU_A4eJq1wHjyoS5ru3jO8szuEVwnfaVZ1-CgzZ21hxdUVhX0O1KEULm5ksy_osVGQS8vdSqs1X6FwdFqP4DVRDnyyoGzNywg9hOVMuh1lWCnyczFJK1MC-oX2sheXqwktJBzjX9x2ACY0YJwo_usKckchuPX02mpVscrePim1X9FlKAdTjli-1gDhShByAU7bYQkP-G12qggTESVMq4goTceN4cfiLmxwavK90yJoMDbid8zqJq94XLc8aK_">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase">Blog</div>
+                        </div>
+                        <h4 class="serif-headline text-2xl text-charcoal mb-3 group-hover:text-primary transition-colors line-clamp-2">10 Biblical Principles on Project Building</h4>
+                        <p class="text-charcoal/60 text-sm leading-relaxed line-clamp-2">Biblical principles for planning, discipline, and sustainable project execution.</p>
+                    </a>
+                    <a href="resources/blog.html" class="group cursor-pointer">
+                        <div class="relative aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-gray-100"><img alt="Resource" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD67CwEwkE06jewSO8Z6zI2Ay5GTpb5cGmJvXp37yvbewU4HULn6qVHojSYCqu1VS2LBGG_YxZrNusTbP95cke3lVuNIe8OpKGu3cPKI-tIyH12ET99xe77sk2_wP-l4UNKPMmVzYcSE3oot5JcJzOKf4wNz2fNxi3isKpddAFC9OAKWVMbUBE_8FpP1AH2HZwWCHdIogV1RXj3spi7jR6sBchnzp4QRza0tyip8I8o4ePj2V8mmGVQvOoNDQnX9lzsBAFepp_9T4ox">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase">Blog</div>
+                        </div>
+                        <h4 class="serif-headline text-2xl text-charcoal mb-3 group-hover:text-primary transition-colors line-clamp-2">Scriptures & Money</h4>
+                        <p class="text-charcoal/60 text-sm leading-relaxed line-clamp-2">Biblical truths that shape healthy financial behavior and kingdom-minded decisions.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-background-light">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="bg-charcoal rounded-2xl p-8 md:p-16 relative overflow-hidden flex flex-col items-center text-center">
+                    <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-accent-gold/10 rounded-full blur-3xl"></div>
+                    <span class="inline-block text-accent-gold font-bold tracking-widest text-xs uppercase mb-6 relative z-10">Podcast Updates</span>
+                    <h2 class="serif-headline text-3xl md:text-5xl text-white mb-6 relative z-10">Sign Up for Freedom Expert</h2>
+                    <p class="text-gray-400 text-lg mb-10 max-w-xl relative z-10">Get notified when we release a new podcast and fresh resources.</p>
+                    <form class="w-full max-w-md flex flex-col sm:flex-row gap-3 relative z-10">
+                        <input class="flex-grow bg-white/10 border border-white/20 rounded-lg px-6 py-4 text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none placeholder:text-gray-500" placeholder="Your best email address" type="email">
+                        <button class="bg-primary text-white font-bold px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap" type="button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white pt-20 pb-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="assets/images/freedom-expert-logo.svg" alt="Freedom Expert logo" class="size-9 rounded-md object-cover border border-primary/20">
+                        <h2 class="text-charcoal text-lg font-bold tracking-tight">Freedom Expert</h2>
+                    </div>
+                    <p class="text-charcoal/50 text-sm leading-loose">Empowering believers to master their finances and live out their God-given mission through editorial excellence.</p>
+                </div>
+                <div class="col-span-1">
+                    <h5 class="text-charcoal font-bold text-sm uppercase tracking-widest mb-6">Platform</h5>
+                    <ul class="space-y-4">
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="programs/index.html">Curriculum</a></li>
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="resources/podcast.html">Podcasts</a></li>
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="resources/index.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-1">
+                    <h5 class="text-charcoal font-bold text-sm uppercase tracking-widest mb-6">About</h5>
+                    <ul class="space-y-4">
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="about/index.html">Our Story</a></li>
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="about/index.html">Mission</a></li>
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-1">
+                    <h5 class="text-charcoal font-bold text-sm uppercase tracking-widest mb-6">Legal</h5>
+                    <ul class="space-y-4">
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-charcoal/40 text-xs">© 2026 Freedom Expert Platform. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 3.675a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+                    </a>
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        <svg class="size-5" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                    </a>
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg class="size-5" fill="currentColor" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+                    </a>
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Freedom Expert</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#6F42C1",
+          "background-light": "#f6f6f8",
+          "background-dark": "#101622"
+        },
+        fontFamily: {
+          "display": ["Inter", "sans-serif"],
+          "serif": ["Playfair Display", "serif"]
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .serif-heading { font-family: 'Playfair Display', serif; }
+  .text-justify-custom { text-align: justify; text-justify: inter-word; }
+  a[data-nav].active { color: #6F42C1; font-weight: 700; }
+</style>
+</head>
+<body data-page="about" class="bg-background-light font-display text-[#111318]">
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#f0f2f4] px-6 lg:px-20 py-4">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a class="flex items-center gap-3" href="../index.html">
+      <img src="../assets/images/freedom-expert-logo.svg" alt="Freedom Expert logo" class="size-10 rounded-lg border border-primary/20"/>
+      <h2 class="text-[#111318] text-xl font-bold leading-tight tracking-tight">Freedom Expert</h2>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-10">
+                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../index.html" data-nav="home">Home</a>
+                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../about/index.html" data-nav="about">About</a>
+                <div class="relative group">
+                  <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-1" href="../resources/index.html" data-nav="resources">Resources <span class="material-symbols-outlined text-base">expand_more</span></a>
+                  <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block">
+                    <div class="w-52 rounded-xl border border-primary/10 bg-white shadow-xl p-2">
+                      <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/blog.html">Blog</a>
+                      <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/podcast.html">Podcast</a>
+                      <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/books.html">Books</a>
+                      <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/downloads.html">Downloads</a>
+                    </div>
+                  </div>
+                </div>
+                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../programs/index.html" data-nav="programs">Programs</a>
+                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../contact/index.html" data-nav="contact">Contact</a>
+            </nav>
+
+    <div class="hidden md:flex items-center gap-4">
+      <a class="bg-primary text-white px-6 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20" href="../contact/index.html">Get Started</a>
+    </div>
+
+    <button class="md:hidden text-[#111318]" aria-expanded="false" aria-label="Toggle menu" data-menu-toggle>
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+
+  <ul class="hidden md:hidden max-w-7xl mx-auto px-0 pt-4 pb-2 space-y-2 border-t border-gray-100 mt-4" data-nav-links>
+    <li><a class="block text-[#111318] text-sm font-medium hover:text-primary" href="../index.html" data-nav="home">Home</a></li>
+    <li><a class="block text-[#111318] text-sm font-medium hover:text-primary" href="../about/index.html" data-nav="about">About</a></li>
+    <li><a class="block text-[#111318] text-sm font-medium hover:text-primary" href="../resources/index.html" data-nav="resources">Resources</a></li>
+    <li><a class="block text-[#111318] text-sm font-medium hover:text-primary" href="../programs/index.html" data-nav="programs">Programs</a></li>
+    <li><a class="block text-[#111318] text-sm font-medium hover:text-primary" href="../contact/index.html" data-nav="contact">Contact</a></li>
+    <li><a class="inline-block bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary/90" href="../contact/index.html">Get Started</a></li>
+  </ul>
+</header>
+
+<main class="pt-32">
+<section class="max-w-7xl mx-auto px-6 lg:px-20 mb-24">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div class="relative">
+      <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-neutral-200">
+        <img alt="Freedom Expert" class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/unnamed-1.png"/>
+      </div>
+      <div class="absolute -bottom-6 -right-6 bg-primary text-white p-8 rounded-xl hidden lg:block max-w-[260px]">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2 opacity-80">Core Vision</p>
+        <p class="serif-heading text-xl italic leading-tight">"Living a life of abundance: spiritual, mental, financial, and social well-being."</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-8">
+      <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">About Freedom Expert</span>
+      <h1 class="serif-heading text-5xl lg:text-7xl text-[#111318] leading-[1.1]">Living a Life of Abundance</h1>
+      <p class="text-lg text-neutral-600 leading-relaxed">Our approach focuses on helping you establish systems that positively influence your spiritual, mental, financial, and social life, enabling your God-given gifts to thrive. Think of it as a fresh start: unlocking your full potential and embracing a new chapter in life.</p>
+      <div class="border-l-2 border-primary/30 pl-6 py-2">
+        <p class="text-sm font-semibold text-neutral-500 uppercase tracking-tighter">Freedom Expert</p>
+        <p class="text-xs text-neutral-400">Faith-based Financial & Life Stewardship</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-neutral-50 border-y border-neutral-100 py-28 mb-24">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="serif-heading text-3xl lg:text-5xl italic text-[#111318] leading-snug">"Every journey begins with a question, and the answers you find will shape the life you envision."</h2>
+    <div class="mt-10 h-px w-24 bg-primary mx-auto"></div>
+    <p class="mt-8 text-sm font-bold tracking-[0.3em] uppercase text-neutral-400">Our Story</p>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 lg:px-20 mb-24">
+  <div class="bg-white rounded-2xl border border-neutral-100 shadow-sm p-8 lg:p-12">
+    <h3 class="serif-heading text-4xl mb-6">Our Story</h3>
+    <p class="text-neutral-600 leading-relaxed text-justify-custom">For over three decades, we've been driven by the boundless potential that resides within the smallest flicker of curiosity. It's the spark of understanding, capable of unfolding into a transformative landscape of knowledge. This understanding has fueled our life’s work: bridging the knowledge gap in the spiritual, financial, mental, and social realms. We support the freedom to explore and help people tap into their full potential. We believe that with the right guidance, every question can unlock a path to deeper understanding and a more fulfilling life.</p>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 lg:px-20 mb-24">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+    <div class="bg-white rounded-2xl border border-neutral-100 shadow-sm p-8 lg:p-10">
+      <h3 class="serif-heading text-3xl mb-5">Our Beliefs</h3>
+      <p class="text-neutral-600 leading-relaxed">At Freedom Experts, our focus is on empowering individuals to translate knowledge into practical wisdom, enabling them to live lives of purpose and fulfilment. This goes beyond accumulating information; it requires embodying knowledge and putting it into action. We believe true flourishing is connected to divine empowerment and aligned with Deuteronomy 8:18.</p>
+    </div>
+    <div class="bg-primary rounded-2xl p-8 lg:p-10 text-white shadow-xl">
+      <h3 class="serif-heading text-3xl mb-5">Why Choose Freedom Expert?</h3>
+      <p class="leading-relaxed text-white/90">Through years of study and research, we’ve learned that unlocking success comes from applying knowledge intentionally. Freedom Expert exists to bridge the gap between knowing and applying, offering practical wisdom to help you transform your spiritual, financial, mental, and social life with purpose and clarity.</p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 lg:px-20 mb-32">
+  <div class="text-center mb-16">
+    <h3 class="serif-heading text-4xl mb-3">5 Reasons Why We Are Unique</h3>
+    <p class="text-neutral-500 max-w-2xl mx-auto">From a kingdom-centered approach to practical execution, these are the pillars that define how we serve.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-white rounded-xl border border-neutral-100 p-6"><p class="text-primary font-bold text-xs tracking-[0.2em] mb-2">01</p><h4 class="font-bold mb-2">A Kingdom Approach</h4><p class="text-sm text-neutral-600 leading-relaxed">We align financial success with eternal values, helping you pursue wholesome wealth without compromising your faith.</p></div>
+    <div class="bg-white rounded-xl border border-neutral-100 p-6"><p class="text-primary font-bold text-xs tracking-[0.2em] mb-2">02</p><h4 class="font-bold mb-2">Practical Strategies for Lasting Impact</h4><p class="text-sm text-neutral-600 leading-relaxed">We blend timeless Biblical principles with actionable strategies that make an immediate difference.</p></div>
+    <div class="bg-white rounded-xl border border-neutral-100 p-6"><p class="text-primary font-bold text-xs tracking-[0.2em] mb-2">03</p><h4 class="font-bold mb-2">Personalized Stewardship and Development</h4><p class="text-sm text-neutral-600 leading-relaxed">We tailor proven principles to your situation so your strategy fits your real life and goals.</p></div>
+    <div class="bg-white rounded-xl border border-neutral-100 p-6"><p class="text-primary font-bold text-xs tracking-[0.2em] mb-2">04</p><h4 class="font-bold mb-2">A Team of Experts and Wisdom Curators</h4><p class="text-sm text-neutral-600 leading-relaxed">We bring together insights from finance, marriage, and Christian living for holistic growth.</p></div>
+    <div class="bg-white rounded-xl border border-neutral-100 p-6 md:col-span-2 lg:col-span-2"><p class="text-primary font-bold text-xs tracking-[0.2em] mb-2">05</p><h4 class="font-bold mb-2">Freedom and True Success Mindset</h4><p class="text-sm text-neutral-600 leading-relaxed">True freedom comes from mastering your mindset and understanding your worth, so success includes financial, relational, and spiritual health.</p></div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 lg:px-20 mb-24">
+  <div class="bg-white rounded-2xl border border-neutral-100 shadow-sm p-8 lg:p-12">
+    <h3 class="serif-heading text-3xl lg:text-4xl text-center mb-8">Our View on the Soul: In Alignment with.. The Bible Project</h3>
+    <div class="aspect-video rounded-xl overflow-hidden border border-primary/10">
+      <iframe class="w-full h-full" src="https://www.youtube.com/embed/g_igCcWAMAM" title="Our View on the Soul - The Bible Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 lg:px-20 mb-20">
+  <div class="bg-primary rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10"><div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48 blur-3xl"></div><div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mb-48 blur-3xl"></div></div>
+    <div class="relative z-10">
+      <h2 class="serif-heading text-4xl lg:text-5xl text-white mb-8">Proven Money Tips Straight To Your Inbox</h2>
+      <p class="text-white/80 text-lg mb-12 max-w-2xl mx-auto">Get practical tips to automate, save, earn passively, and invest smarter with encouragement for your journey.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a class="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-neutral-50 transition-all" href="../programs/index.html">Explore Programs</a>
+        <a class="bg-transparent border-2 border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all" href="../contact/index.html">Join Community</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-white border-t border-neutral-100 py-20 px-6 lg:px-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div class="col-span-1 md:col-span-1">
+      <div class="flex items-center gap-3 mb-6">
+        <img src="../assets/images/freedom-expert-logo.svg" alt="Freedom Expert logo" class="size-9 rounded-md border border-primary/20"/>
+        <h2 class="text-[#111318] text-lg font-bold leading-tight">Freedom Expert</h2>
+      </div>
+      <p class="text-neutral-500 text-sm leading-relaxed">Empowering your journey to faith-based financial freedom through wisdom, stewardship, and community.</p>
+    </div>
+    <div>
+      <h5 class="font-bold mb-6 text-sm uppercase tracking-widest">Platform</h5>
+      <ul class="flex flex-col gap-4 text-sm text-neutral-500">
+        <li><a class="hover:text-primary transition-colors" href="../programs/index.html">Course Catalog</a></li>
+        <li><a class="hover:text-primary transition-colors" href="../contact/index.html">Community Forum</a></li>
+        <li><a class="hover:text-primary transition-colors" href="../resources/index.html">Resource Library</a></li>
+        <li><a class="hover:text-primary transition-colors" href="../resources/blog.html">Success Stories</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold mb-6 text-sm uppercase tracking-widest">Company</h5>
+      <ul class="flex flex-col gap-4 text-sm text-neutral-500">
+        <li><a class="hover:text-primary transition-colors" href="../about/index.html">Our Story</a></li>
+        <li><a class="hover:text-primary transition-colors" href="../about/index.html">Mission &amp; Vision</a></li>
+        <li><a class="hover:text-primary transition-colors" href="../contact/index.html">Contact Support</a></li>
+        <li><a class="hover:text-primary transition-colors" href="../privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold mb-6 text-sm uppercase tracking-widest">Stay Inspired</h5>
+      <p class="text-sm text-neutral-500 mb-4">Weekly wisdom delivered to your inbox.</p>
+      <div class="flex gap-2">
+        <input class="bg-neutral-50 border border-neutral-200 rounded-lg px-4 py-2 text-sm w-full focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Email address" type="email"/>
+        <button class="bg-primary text-white p-2 rounded-lg" type="button"><span class="material-symbols-outlined text-sm">send</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-neutral-50 text-center text-neutral-400 text-xs">© 2026 Freedom Expert Education. All rights reserved. Designed for Stewardship.</div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+

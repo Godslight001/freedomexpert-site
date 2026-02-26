@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Freedom Expert Podcast | Freedom Conversations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          primary: '#6F42C1',
+          'navy-accent': '#101622',
+          'background-light': '#f6f6f8',
+          'background-dark': '#101622'
+        },
+        fontFamily: {
+          display: ['Inter', 'sans-serif'],
+          sans: ['Inter', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; background-color: #f6f6f8; }
+  .editorial-shadow { box-shadow: 0 4px 20px -2px rgba(111, 66, 193, 0.08); }
+  a[data-nav].active { color: #6F42C1; font-weight: 700; }
+</style>
+</head>
+<body data-page="resources" class="bg-background-light text-navy-accent antialiased">
+
+<nav class="sticky top-0 z-50 w-full bg-white/85 backdrop-blur-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-10">
+      <a class="flex items-center gap-3 group" href="../index.html">
+        <img src="../assets/images/freedom-expert-logo.svg" alt="Freedom Expert logo" class="size-10 rounded-lg border border-primary/20"/>
+        <span class="text-xl font-extrabold tracking-tight text-navy-accent">Freedom Expert</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors" href="../index.html" data-nav="home">Home</a>
+        <a class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors" href="../about/index.html" data-nav="about">About</a>
+        <div class="relative group">
+          <a class="text-sm font-semibold text-primary inline-flex items-center gap-1" href="index.html" data-nav="resources">Resources <span class="material-symbols-outlined text-base">expand_more</span></a>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block">
+            <div class="w-52 rounded-xl border border-primary/10 bg-white shadow-xl p-2">
+              <a class="block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-primary/10 hover:text-primary" href="blog.html">Blog</a>
+              <a class="block px-3 py-2 rounded-lg text-sm text-primary font-semibold bg-primary/10" href="podcast.html">Podcast</a>
+              <a class="block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-primary/10 hover:text-primary" href="books.html">Books</a>
+              <a class="block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-primary/10 hover:text-primary" href="downloads.html">Downloads</a>
+            </div>
+          </div>
+        </div>
+        <a class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors" href="../programs/index.html" data-nav="programs">Programs</a>
+        <a class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors" href="../contact/index.html" data-nav="contact">Contact</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="hidden lg:flex items-center bg-gray-100 rounded-full px-4 py-2 border border-transparent focus-within:border-primary/30 focus-within:bg-white transition-all">
+        <span class="material-symbols-outlined text-gray-400 text-xl">search</span>
+        <input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-gray-400" placeholder="Search episodes..." type="text"/>
+      </div>
+      <a class="hidden md:inline-flex bg-navy-accent text-white text-sm font-bold py-2.5 px-6 rounded-lg hover:bg-primary transition-colors" href="../contact/index.html">Get Started</a>
+      <button class="md:hidden text-navy-accent" aria-expanded="false" aria-label="Toggle menu" data-menu-toggle>
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </div>
+  <ul class="hidden md:hidden px-6 pb-6 space-y-3 border-t border-gray-100 bg-white" data-nav-links>
+    <li><a class="block text-gray-700 hover:text-primary text-sm font-medium pt-4" href="../index.html" data-nav="home">Home</a></li>
+    <li><a class="block text-gray-700 hover:text-primary text-sm font-medium" href="../about/index.html" data-nav="about">About</a></li>
+    <li><a class="block text-primary text-sm font-medium" href="index.html" data-nav="resources">Resources</a></li>
+    <li><a class="block text-gray-600 hover:text-primary text-xs pl-4" href="blog.html">- Blog</a></li>
+    <li><a class="block text-primary text-xs pl-4 font-semibold" href="podcast.html">- Podcast</a></li>
+    <li><a class="block text-gray-600 hover:text-primary text-xs pl-4" href="books.html">- Books</a></li>
+    <li><a class="block text-gray-600 hover:text-primary text-xs pl-4" href="downloads.html">- Downloads</a></li>
+    <li><a class="block text-gray-700 hover:text-primary text-sm font-medium" href="../programs/index.html" data-nav="programs">Programs</a></li>
+    <li><a class="block text-gray-700 hover:text-primary text-sm font-medium" href="../contact/index.html" data-nav="contact">Contact</a></li>
+    <li><a class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm" href="../contact/index.html">Get Started</a></li>
+  </ul>
+</nav>
+
+<main class="max-w-7xl mx-auto px-6 lg:px-12 py-10">
+<section class="relative w-full rounded-2xl overflow-hidden mb-16 group">
+  <div class="aspect-[21/9] w-full relative">
+    <img alt="Freedom Expert podcast visual" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://freedomexpert.ca/wp-content/uploads/2025/01/Freedom-expert-Podcast.webp"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-navy-accent/90 via-navy-accent/40 to-transparent flex flex-col justify-end p-8 lg:p-16">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Freedom Expert Podcast</span>
+          <span class="text-white/70 text-sm font-medium">Faith • Wisdom • Stewardship</span>
+        </div>
+        <h1 class="text-white text-4xl lg:text-5xl font-black leading-tight mb-4 tracking-tight">Freedom Conversations for Purpose-Driven Living</h1>
+        <p class="text-white/80 text-lg mb-8 font-light">Sign up for the Freedom Expert and get notified when we have a new podcast.</p>
+        <div class="flex items-center gap-4">
+          <button class="bg-primary text-white flex items-center gap-2 py-4 px-8 rounded-xl font-bold hover:bg-white hover:text-primary transition-all shadow-xl shadow-primary/20"><span class="material-symbols-outlined fill-1">play_arrow</span>Play Now</button>
+          <button class="bg-white/10 backdrop-blur-md text-white border border-white/20 p-4 rounded-xl hover:bg-white/20 transition-all"><span class="material-symbols-outlined">bookmark</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-gray-200 pb-8">
+  <div><h2 class="text-2xl font-bold text-navy-accent">Explore Conversations</h2><p class="text-gray-500 text-sm mt-1">Real Freedom Expert themes on mindset, purpose, and stewardship</p></div>
+  <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
+    <button class="bg-navy-accent text-white px-6 py-2 rounded-full text-sm font-bold shrink-0">All Episodes</button>
+    <button class="bg-white border border-gray-200 text-gray-600 px-6 py-2 rounded-full text-sm font-semibold hover:border-primary hover:text-primary transition-colors shrink-0">Faith</button>
+    <button class="bg-white border border-gray-200 text-gray-600 px-6 py-2 rounded-full text-sm font-semibold hover:border-primary hover:text-primary transition-colors shrink-0">Mindset</button>
+    <button class="bg-white border border-gray-200 text-gray-600 px-6 py-2 rounded-full text-sm font-semibold hover:border-primary hover:text-primary transition-colors shrink-0">Purpose</button>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="group bg-white rounded-2xl overflow-hidden editorial-shadow border border-gray-100 flex flex-col hover:border-primary/20 transition-all duration-300">
+    <div class="relative aspect-video overflow-hidden"><img alt="A Thief, Remembered" class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://freedomexpert.ca/wp-content/uploads/2025/04/Grok-Image-2025-04-19-at-10.51.55-am.webp"/></div>
+    <div class="p-6 flex flex-col flex-1"><div class="flex items-center gap-2 mb-3"><span class="text-[10px] font-black bg-gray-100 text-gray-500 px-2 py-0.5 rounded">NEW</span><span class="text-xs text-gray-400 font-medium">April 18, 2025</span></div><h3 class="text-xl font-bold text-navy-accent mb-3 group-hover:text-primary transition-colors">A Thief, Remembered</h3><p class="text-gray-500 text-sm leading-relaxed mb-6">A soul-stirring reflection at Calvary: mercy, surrender, and the transforming power of grace.</p><div class="mt-auto flex items-center justify-between"><button class="flex items-center gap-2 text-navy-accent hover:text-primary transition-colors font-bold text-sm uppercase tracking-wider"><span class="material-symbols-outlined text-xl">play_circle</span>Listen Now</button><span class="text-xs font-semibold text-gray-400">35 min</span></div></div>
+  </div>
+  <div class="group bg-white rounded-2xl overflow-hidden editorial-shadow border border-gray-100 flex flex-col hover:border-primary/20 transition-all duration-300">
+    <div class="relative aspect-video overflow-hidden"><img alt="The Jealous Moon" class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://freedomexpert.ca/wp-content/uploads/2025/03/image.webp"/></div>
+    <div class="p-6 flex flex-col flex-1"><div class="flex items-center gap-2 mb-3"><span class="text-[10px] font-black bg-gray-100 text-gray-500 px-2 py-0.5 rounded">NEW</span><span class="text-xs text-gray-400 font-medium">March 15, 2025</span></div><h3 class="text-xl font-bold text-navy-accent mb-3 group-hover:text-primary transition-colors">The Jealous Moon</h3><p class="text-gray-500 text-sm leading-relaxed mb-6">A mindset-centered conversation on perception, response, and the lens through which we live.</p><div class="mt-auto flex items-center justify-between"><button class="flex items-center gap-2 text-navy-accent hover:text-primary transition-colors font-bold text-sm uppercase tracking-wider"><span class="material-symbols-outlined text-xl">play_circle</span>Listen Now</button><span class="text-xs font-semibold text-gray-400">42 min</span></div></div>
+  </div>
+  <div class="group bg-white rounded-2xl overflow-hidden editorial-shadow border border-gray-100 flex flex-col hover:border-primary/20 transition-all duration-300">
+    <div class="relative aspect-video overflow-hidden"><img alt="Abel: A Mystical Life of Faith and Sacrifice" class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://freedomexpert.ca/wp-content/uploads/2025/02/cain-and-abel.webp"/></div>
+    <div class="p-6 flex flex-col flex-1"><div class="flex items-center gap-2 mb-3"><span class="text-[10px] font-black bg-gray-100 text-gray-500 px-2 py-0.5 rounded">NEW</span><span class="text-xs text-gray-400 font-medium">February 14, 2025</span></div><h3 class="text-xl font-bold text-navy-accent mb-3 group-hover:text-primary transition-colors">Abel: A Mystical Life of Faith and Sacrifice</h3><p class="text-gray-500 text-sm leading-relaxed mb-6">Faith, sacrifice, and devotion: lessons from Abel’s short but deeply significant life.</p><div class="mt-auto flex items-center justify-between"><button class="flex items-center gap-2 text-navy-accent hover:text-primary transition-colors font-bold text-sm uppercase tracking-wider"><span class="material-symbols-outlined text-xl">play_circle</span>Listen Now</button><span class="text-xs font-semibold text-gray-400">39 min</span></div></div>
+  </div>
+</div>
+
+<div class="flex items-center justify-center gap-2 mt-16 py-8"><button class="size-10 flex items-center justify-center rounded-lg hover:bg-white text-gray-400"><span class="material-symbols-outlined">chevron_left</span></button><button class="size-10 flex items-center justify-center rounded-lg bg-navy-accent text-white font-bold">1</button><button class="size-10 flex items-center justify-center rounded-lg hover:bg-white text-gray-500 font-semibold">2</button><button class="size-10 flex items-center justify-center rounded-lg hover:bg-white text-gray-500 font-semibold">3</button><button class="size-10 flex items-center justify-center rounded-lg hover:bg-white text-gray-400"><span class="material-symbols-outlined">chevron_right</span></button></div>
+</main>
+
+<div class="fixed bottom-0 inset-x-0 bg-navy-accent text-white h-20 z-40 shadow-2xl flex items-center px-6 lg:px-12 border-t border-white/5">
+  <div class="flex-1 flex items-center gap-4"><img alt="Current Episode Artwork" class="size-12 rounded object-cover border border-white/10" src="https://freedomexpert.ca/wp-content/uploads/2025/04/Grok-Image-2025-04-19-at-10.51.55-am.webp"/><div class="max-w-xs"><p class="text-sm font-bold truncate">A Thief, Remembered</p><p class="text-xs text-white/50 truncate">Latest Conversation • Now Playing</p></div></div>
+  <div class="hidden md:flex items-center gap-5"><button><span class="material-symbols-outlined">skip_previous</span></button><button class="size-10 bg-white text-navy-accent rounded-full flex items-center justify-center"><span class="material-symbols-outlined fill-1">pause</span></button><button><span class="material-symbols-outlined">skip_next</span></button></div>
+</div>
+
+<footer class="bg-white border-t border-gray-200 pt-16 pb-32 mt-12">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div>
+      <div class="flex items-center gap-3 mb-6"><img src="../assets/images/freedom-expert-logo.svg" alt="Freedom Expert logo" class="size-9 rounded-md border border-primary/20"><span class="text-lg font-extrabold tracking-tight text-navy-accent">Freedom Expert</span></div>
+      <p class="text-gray-500 text-sm leading-relaxed mb-5">Empowering believers to master their finances and live out their divine calling with excellence.</p>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <a class="text-gray-500 hover:text-primary" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="text-gray-500 hover:text-primary" href="https://x.com" target="_blank" rel="noopener noreferrer">X</a>
+        <a class="text-gray-500 hover:text-primary" href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a class="text-gray-500 hover:text-primary" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
+    </div>
+    <div><h4 class="text-sm font-bold uppercase tracking-widest text-navy-accent mb-6">Resources</h4><ul class="space-y-4"><li><a class="text-sm text-gray-500 hover:text-primary" href="podcast.html">Podcast Library</a></li><li><a class="text-sm text-gray-500 hover:text-primary" href="downloads.html">Financial Toolkit</a></li><li><a class="text-sm text-gray-500 hover:text-primary" href="blog.html">Library Articles</a></li></ul></div>
+    <div><h4 class="text-sm font-bold uppercase tracking-widest text-navy-accent mb-6">Platform</h4><ul class="space-y-4"><li><a class="text-sm text-gray-500 hover:text-primary" href="../about/index.html">About Us</a></li><li><a class="text-sm text-gray-500 hover:text-primary" href="../contact/index.html">Community</a></li><li><a class="text-sm text-gray-500 hover:text-primary" href="../programs/index.html">Programs</a></li></ul></div>
+    <div><h4 class="text-sm font-bold uppercase tracking-widest text-navy-accent mb-6">Legal</h4><ul class="space-y-4"><li><a class="text-sm text-gray-500 hover:text-primary" href="../privacy-policy.html">Privacy Policy</a></li><li><a class="text-sm text-gray-500 hover:text-primary" href="../terms-of-service.html">Terms of Service</a></li></ul></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-12 pt-8 border-t border-gray-100"><p class="text-xs text-gray-400">© 2026 Freedom Expert Platform. All rights reserved.</p></div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body></html>

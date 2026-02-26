@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Books | Freedom Expert</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          primary: '#6F42C1',
+          'accent-gold': '#C5A059',
+          charcoal: '#2D2D2D',
+          'background-light': '#f6f6f8',
+          'background-dark': '#101622'
+        },
+        fontFamily: {
+          display: ['Inter', 'sans-serif'],
+          serif: ['Playfair Display', 'serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .serif { font-family: 'Playfair Display', serif; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body data-page="resources" class="bg-background-light text-charcoal">
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+    <a class="flex items-center gap-3" href="../index.html"><img src="../assets/images/freedom-expert-logo.svg" alt="Freedom Expert logo" class="size-10 rounded-lg border border-primary/20"><h2 class="text-charcoal text-xl font-bold tracking-tight">Freedom Expert</h2></a>
+    <nav class="hidden md:flex items-center gap-10">
+      <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../index.html" data-nav="home">Home</a>
+      <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../about/index.html" data-nav="about">About</a>
+      <div class="relative group">
+        <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-1" href="../resources/index.html" data-nav="resources">Resources <span class="material-symbols-outlined text-base">expand_more</span></a>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block">
+          <div class="w-52 rounded-xl border border-primary/10 bg-white shadow-xl p-2">
+            <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/blog.html">Blog</a>
+            <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/podcast.html">Podcast</a>
+            <a class="block px-3 py-2 rounded-lg text-sm text-primary font-semibold bg-primary/10" href="../resources/books.html">Books</a>
+            <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/downloads.html">Downloads</a>
+          </div>
+        </div>
+      </div>
+      <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../programs/index.html" data-nav="programs">Programs</a>
+      <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../contact/index.html" data-nav="contact">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-4"><a class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold" href="../contact/index.html">Get Started</a></div>
+    <button class="md:hidden text-charcoal" aria-expanded="false" aria-label="Toggle menu" data-menu-toggle><span class="material-symbols-outlined text-3xl">menu</span></button>
+  </div>
+  <ul class="hidden md:hidden px-6 pb-6 space-y-3 border-t border-gray-100" data-nav-links>
+    <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium pt-4" href="../index.html" data-nav="home">Home</a></li>
+    <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="../about/index.html" data-nav="about">About</a></li>
+    <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="../resources/index.html" data-nav="resources">Resources</a></li>
+    <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/blog.html">- Blog</a></li>
+    <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/podcast.html">- Podcast</a></li>
+    <li><a class="block text-primary text-xs pl-4 font-semibold" href="../resources/books.html">- Books</a></li>
+    <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/downloads.html">- Downloads</a></li>
+    <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="../programs/index.html" data-nav="programs">Programs</a></li>
+    <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="../contact/index.html" data-nav="contact">Contact</a></li>
+    <li><a class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm" href="../contact/index.html">Get Started</a></li>
+  </ul>
+</header>
+
+<section class="bg-gradient-to-b from-white to-background-light w-full border-b border-primary/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-[420px] aspect-[3/4] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.25)] rounded-lg overflow-hidden transform lg:rotate-[-2deg] hover:rotate-0 transition-transform duration-500 border border-primary/20">
+          <img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/TTP-The-Treasure-Principle1.png.webp" alt="Featured book cover"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col gap-6">
+        <div class="flex items-center gap-3">
+          <div class="bg-primary px-3 py-1 rounded flex items-center gap-2">
+            <span class="material-symbols-outlined text-white text-sm font-bold">menu_book</span>
+            <span class="text-white font-extrabold text-[10px] uppercase tracking-[0.2em]">Featured</span>
+          </div>
+          <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Reading Journey</span>
+        </div>
+        <h1 class="serif text-5xl lg:text-6xl leading-tight">Books for <span class="italic text-primary">Growth</span></h1>
+        <p class="text-charcoal/70 text-lg lg:text-xl font-light leading-relaxed">The suggested books listed are not intended to provide direct financial advice, but rather valuable insights that broaden understanding and encourage personal growth in stewardship, mindset, and purpose.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="max-w-7xl mx-auto w-full px-6 lg:px-12 py-12">
+  <div class="flex flex-col gap-6 mb-16 max-w-3xl">
+    <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Curated Resources</span>
+    <h2 class="serif text-5xl lg:text-6xl leading-tight">Reading <span class="italic text-primary/80">Library</span></h2>
+    <p class="text-charcoal/70 text-lg lg:text-xl font-light leading-relaxed">Reading is transformative. These are books I have been reading and recommending for balanced, purpose-driven growth.</p>
+  </div>
+
+  <div class="flex items-center justify-between border-b border-primary/10 pb-6 mb-12">
+    <div class="flex gap-4 overflow-x-auto no-scrollbar">
+      <button class="px-6 py-2 rounded-full bg-primary text-white text-sm font-bold whitespace-nowrap">All Books</button>
+      <button class="px-6 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold hover:bg-primary/20 transition-colors whitespace-nowrap">Stewardship</button>
+      <button class="px-6 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold hover:bg-primary/20 transition-colors whitespace-nowrap">Leadership</button>
+      <button class="px-6 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold hover:bg-primary/20 transition-colors whitespace-nowrap">Mindset</button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14">
+    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/615CX5brZ3L.jpg" alt="615Cx5brz3l"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">615Cx5brz3l</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/61HbNgVWLZL._AC_UF10001000_QL80_.jpg" alt="61Hbngvwlzl"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">61Hbngvwlzl</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/61IxJuRI39L._SL1000_.webp" alt="61Ixjuri39l"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">61Ixjuri39l</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/81QNAxHllEL.jpg" alt="81Qnaxhllel"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">81Qnaxhllel</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/81sAnVHODJL._SL1500_.jpg" alt="81Sanvhodjl"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">81Sanvhodjl</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/Giving-and-Tithing-Includes-Serving-and-Stewardship-by-Larry-Burkett-Book-Review.jpg" alt="Giving And Tithing Includes Serving And Stewardship By Larry Burkett Book Review"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Giving And Tithing Includes Serving And Stewardship By Larry Burkett Book Review</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/managing-god-s-money-a-biblical-guide.jpg" alt="Managing God S Money A Biblical Guide"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Managing God S Money A Biblical Guide</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/pursuit-of-purpose.jpg" alt="Pursuit Of Purpose"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Pursuit Of Purpose</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/Screenshot-2025-01-31-at-5.21.39%E2%80%AFAM.webp" alt="Recommended Read"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Recommended Read</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/the-automatic-millionaire-expanded-and-updated.jpg" alt="The Automatic Millionaire Expanded And Updated"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">The Automatic Millionaire Expanded And Updated</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/the-richest-man-in-babylon-41.jpg" alt="The Richest Man In Babylon 41"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">The Richest Man In Babylon 41</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/TTP-The-Treasure-Principle1.png.webp" alt="Ttp The Treasure Principle1 Png"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Ttp The Treasure Principle1 Png</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/02/25490476.webp" alt="Recommended Read"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Recommended Read</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/02/33414169.webp" alt="Recommended Read"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Recommended Read</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/02/41XiTiH08pL._AC_UF10001000_QL80_.webp" alt="41Xitih08pl"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">41Xitih08pl</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/02/71A16g6QyuL._AC_UF10001000_QL80_.webp" alt="71A16g6qyul"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">71A16g6qyul</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/02/71IY6iFfTQL.jpg" alt="71Iy6ifftql"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">71Iy6ifftql</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/02/71nw5hvCzML._AC_UF10001000_QL80_.jpg" alt="71Nw5hvczml"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">71Nw5hvczml</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-09-at-7.53.31%E2%80%AFPM-1.jpeg" alt="Recommended Read"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Recommended Read</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-09-at-8.02.40%E2%80%AFPM.jpeg" alt="Recommended Read"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Recommended Read</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/03/610reAW7FeL._SL1360_.jpg" alt="610Reaw7fel"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">610Reaw7fel</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/03/612QUzxzeZL._SL1360_.webp" alt="612Quzxzezl"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">612Quzxzezl</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/03/71z5lv6LIL._SL1500_.webp" alt="71Z5lv6lil"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">71Z5lv6lil</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/03/becoming-a-leader-dr-myle-selar.co-66f33e86ca9ea.webp" alt="Becoming A Leader Dr Myle"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Becoming A Leader Dr Myle</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/03/image-9.webp" alt="Recommended Read"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Recommended Read</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-13-at-1.54.21%E2%80%AFPM.webp" alt="Recommended Read"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Recommended Read</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-13-at-2.11.25%E2%80%AFPM.webp" alt="Recommended Read"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Recommended Read</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>    <article class="group flex flex-col gap-5">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-xl border border-primary/10 transition-transform duration-500 group-hover:-translate-y-2"><img class="w-full h-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-13-at-3.27.41%E2%80%AFPM.webp" alt="Recommended Read"/></div>
+      <div><h3 class="text-2xl serif group-hover:text-primary transition-colors">Recommended Read</h3><p class="text-charcoal/70 text-sm leading-relaxed font-light mt-2">A recommended book from the Freedom Expert reading list for growth in stewardship, leadership, and mindset.</p></div>
+    </article>  </div>
+
+  <div class="mt-24 rounded-3xl bg-charcoal overflow-hidden relative border border-primary/20">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-50"></div>
+    <div class="relative px-8 py-16 lg:p-20 flex flex-col items-center text-center max-w-4xl mx-auto">
+      <h3 class="text-white text-4xl lg:text-5xl serif mb-6 leading-tight">Why This List Exists</h3>
+      <p class="text-gray-300 text-lg max-w-2xl">Let these resources guide you toward meaningful change. The aim is to share what has helped me grow so you can explore what aligns with your journey.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-white pt-20 pb-12 border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16"><div><div class="flex items-center gap-3 mb-6"><img src="../assets/images/freedom-expert-logo.svg" alt="Freedom Expert logo" class="size-9 rounded-md border border-primary/20"><h2 class="text-charcoal text-lg font-bold">Freedom Expert</h2></div><p class="text-charcoal/50 text-sm">Empowering your journey to faith-based financial freedom.</p></div><div><h5 class="font-bold mb-6 text-sm uppercase tracking-widest">Platform</h5><ul class="space-y-4 text-sm text-charcoal/60"><li><a href="../programs/index.html">Programs</a></li><li><a href="podcast.html">Podcasts</a></li><li><a href="index.html">Resources</a></li></ul></div><div><h5 class="font-bold mb-6 text-sm uppercase tracking-widest">Company</h5><ul class="space-y-4 text-sm text-charcoal/60"><li><a href="../about/index.html">Our Story</a></li><li><a href="../contact/index.html">Contact</a></li><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div><div><h5 class="font-bold mb-6 text-sm uppercase tracking-widest">Legal</h5><ul class="space-y-4 text-sm text-charcoal/60"><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="../terms-of-service.html">Terms of Service</a></li></ul></div></div><div class="pt-8 border-t border-gray-100 text-charcoal/40 text-xs">© 2026 Freedom Expert Platform. All rights reserved.</div></div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+
