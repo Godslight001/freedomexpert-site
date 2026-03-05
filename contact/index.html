@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -52,9 +52,9 @@
             <nav class="hidden md:flex items-center gap-10">
                 <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../index.html" data-nav="home">Home</a>
                 <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../about/index.html" data-nav="about">About</a>
-                <div class="relative group">
-                    <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-1" href="../resources/index.html" data-nav="resources">Resources <span class="material-symbols-outlined text-base">expand_more</span></a>
-                    <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block">
+                <div class="relative">
+                    <button class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-1" type="button" aria-expanded="false" data-resources-trigger>Resources <span class="material-symbols-outlined text-base">expand_more</span></button>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden" data-resources-menu>
                         <div class="w-52 rounded-xl border border-primary/10 bg-white shadow-xl p-2">
                             <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/blog.html">Blog</a>
                             <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/podcast.html">Podcast</a>
@@ -68,19 +68,19 @@
             </nav>
 
             <div class="hidden md:flex items-center gap-4">
-                <a class="text-sm font-bold text-charcoal px-4" href="../resources/index.html">Login</a>
+                <a class="text-sm font-bold text-charcoal px-4" href="../contact/index.html">Login</a>
                 <a class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm" href="../contact/index.html">Get Started</a>
             </div>
 
             <button class="md:hidden text-charcoal" aria-expanded="false" aria-label="Toggle menu" data-menu-toggle>
-                <span class="material-symbols-outlined text-3xl">menu</span>
-            </button>
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
         </div>
 
         <ul class="hidden md:hidden px-6 pb-6 space-y-3 border-t border-gray-100" data-nav-links>
             <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium pt-4" href="../index.html" data-nav="home">Home</a></li>
             <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="../about/index.html" data-nav="about">About</a></li>
-            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="../resources/index.html" data-nav="resources">Resources</a></li>
+            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="#" data-nav="resources">Resources</a></li>
             <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/blog.html">- Blog</a></li>
             <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/podcast.html">- Podcast</a></li>
             <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/books.html">- Books</a></li>
@@ -234,7 +234,7 @@
                     <ul class="space-y-4">
                         <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../programs/index.html">Curriculum</a></li>
                         <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../resources/podcast.html">Podcasts</a></li>
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../resources/index.html">Resources</a></li>
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../resources/blog.html">Blog</a></li>
                     </ul>
                 </div>
                 <div class="col-span-1">
@@ -254,20 +254,12 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-charcoal/40 text-xs">� 2026 Freedom Expert Platform. All rights reserved.</p>
+                <p class="text-charcoal/40 text-xs">© 2026 Freedom Expert Platform. All rights reserved.</p>
                 <div class="flex items-center gap-6">
-                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 3.675a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
-                    </a>
-                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
-                        <svg class="size-5" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-                    </a>
-                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                        <svg class="size-5" fill="currentColor" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
-                    </a>
-                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </a>
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 3.675a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"></path></svg></a>
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg class="size-5" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a>
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="size-5" fill="currentColor" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a>
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
                 </div>
             </div>
         </div>
@@ -277,3 +269,6 @@
 </body>
 
 </html>
+
+
+
