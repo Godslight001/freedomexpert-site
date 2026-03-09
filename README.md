@@ -1,4 +1,4 @@
-﻿# Freedom Expert Website Rebuild
+﻿# FreedomExpert Website Rebuild
 
 Professional multi-page static website with concise navigation and CMS-ready page templates.
 

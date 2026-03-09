@@ -1,42 +1,14 @@
-﻿<!doctype html>
-<html lang="en">
+$root = 'c:\Users\Hp\OneDrive\Documents\Freedom'
+Set-Location $root
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Downloads | FreedomExpert</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6F42C1',
-                        'accent-gold': '#C5A059',
-                        charcoal: '#2D2D2D',
-                        'background-light': '#f6f6f8'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif
-        }
-        
-        .serif {
-            font-family: 'Playfair Display', serif
-        }
-    </style>
-</head>
+$rootSocialBlock = @'
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.linkedin.com/in/freedom-expert-9558373b5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.369-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.063 2.063 0 110-4.126 2.063 2.063 0 010 4.126zM7.114 20.452H3.56V9h3.554v11.452z"></path></svg></a>
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://x.com/fexphq/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg class="size-5" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a>
+                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.whatsapp.com/channel/0029Vb8BHvE3LdQOnvdV6l26" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel"><svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.8 11.8 0 0012.07 0C5.5 0 .16 5.34.16 11.92c0 2.1.55 4.16 1.6 5.98L0 24l6.27-1.64a11.9 11.9 0 005.8 1.48h.01c6.57 0 11.91-5.34 11.91-11.92 0-3.18-1.24-6.17-3.47-8.44zM12.08 21.8h-.01a9.86 9.86 0 01-5.03-1.38l-.36-.21-3.72.98 1-3.63-.24-.37a9.86 9.86 0 01-1.52-5.27c0-5.45 4.43-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.8 9.8 0 012.9 6.98c0 5.45-4.43 9.88-9.88 9.88zm5.42-7.42c-.3-.15-1.77-.88-2.04-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.8-1.67-2.1-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.53.08-.8.38s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.13 4.55.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"></path></svg></a>
+'@
 
-<body data-page="resources" class="bg-background-light">
-    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+$programHeader = @'
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             <a class="flex items-center gap-3" href="../index.html">
                 <img src="../assets/images/freedom-expert-logo.svg" alt="FreedomExpert logo" class="size-10 rounded-lg object-cover border border-primary/20">
@@ -62,7 +34,7 @@
             </nav>
 
             <div class="hidden md:flex items-center gap-4">
-
+                
                 <a class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm" href="../contact/index.html">Get Started</a>
             </div>
 
@@ -84,8 +56,10 @@
             <li><a class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm" href="../contact/index.html">Get Started</a></li>
         </ul>
     </header>
-    downloads
-    <footer class="bg-white pt-20 pb-12 border-t border-gray-100">
+'@
+
+$programFooter = @'
+<footer class="bg-white pt-20 pb-12 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 md:col-span-1">
@@ -120,7 +94,7 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-charcoal/40 text-xs">© 2026 FreedomExpert Platform. All rights reserved.</p>
+                <p class="text-charcoal/40 text-xs">&copy; 2026 FreedomExpert Platform. All rights reserved.</p>
                 <div class="flex items-center gap-6">
                     <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.linkedin.com/in/freedom-expert-9558373b5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.369-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.063 2.063 0 110-4.126 2.063 2.063 0 010 4.126zM7.114 20.452H3.56V9h3.554v11.452z"></path></svg></a>
                     <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://x.com/fexphq/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg class="size-5" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a>
@@ -129,6 +103,38 @@
             </div>
         </div>
     </footer>
-</body>
+'@
 
-</html>
+$files = Get-ChildItem -Recurse -Filter *.html | Where-Object { $_.Name -notlike 'live_*' -and $_.Name -ne '_programs.html' }
+foreach ($file in $files) {
+    $content = Get-Content -Raw -Path $file.FullName
+
+    if ($file.DirectoryName -eq $root) {
+        $content = $content.Replace('href="programs/index.html">Curriculum</a>', 'href="resources/podcast.html">Curriculum</a>')
+    }
+    else {
+        $content = $content.Replace('href="../programs/index.html">Curriculum</a>', 'href="../resources/podcast.html">Curriculum</a>')
+    }
+
+    $socialPattern = '(?s)\s*<a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www\.instagram\.com/".*?aria-label="Facebook">.*?</a>'
+    $content = [regex]::Replace($content, $socialPattern, "`r`n$rootSocialBlock")
+
+    Set-Content -Path $file.FullName -Value $content -Encoding utf8
+}
+
+$programFiles = @(
+    'programs\financial-freedom.html',
+    'programs\leadership-lab.html',
+    'programs\family-stewardship.html',
+    'programs\kingdom-capitalist.html',
+    'programs\influence-impact.html',
+    'programs\strategic-insights.html'
+)
+
+foreach ($relative in $programFiles) {
+    $path = Join-Path $root $relative
+    $content = Get-Content -Raw -Path $path
+    $content = [regex]::Replace($content, '(?s)<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">.*?</header>', $programHeader)
+    $content = [regex]::Replace($content, '(?s)<footer class="bg-white pt-20 pb-12 border-t border-gray-100">.*?</footer>', $programFooter)
+    Set-Content -Path $path -Value $content -Encoding utf8
+}

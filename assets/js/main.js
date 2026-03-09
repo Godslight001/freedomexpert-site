@@ -102,6 +102,127 @@
     });
   }
 
+  var heroSlider = document.querySelector('[data-hero-slider]');
+  if (heroSlider) {
+    var heroSlides = Array.prototype.slice.call(heroSlider.querySelectorAll('[data-hero-slide]'));
+    var heroDots = Array.prototype.slice.call(heroSlider.querySelectorAll('[data-hero-dot]'));
+    var heroPrev = heroSlider.querySelector('[data-hero-prev]');
+    var heroNext = heroSlider.querySelector('[data-hero-next]');
+    var activeHeroIndex = heroSlides.findIndex(function (slide) {
+      return slide.getAttribute('data-active') === 'true';
+    });
+    var heroIntervalId;
+
+    if (activeHeroIndex < 0) {
+      activeHeroIndex = 0;
+    }
+
+    var setActiveHeroSlide = function (index) {
+      activeHeroIndex = (index + heroSlides.length) % heroSlides.length;
+
+      heroSlides.forEach(function (slide, slideIndex) {
+        var isActive = slideIndex === activeHeroIndex;
+        slide.setAttribute('data-active', String(isActive));
+        slide.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      heroDots.forEach(function (dot, dotIndex) {
+        var isActive = dotIndex === activeHeroIndex;
+        dot.setAttribute('aria-pressed', String(isActive));
+        dot.classList.toggle('bg-white', isActive);
+        dot.classList.toggle('bg-white/35', !isActive);
+      });
+    };
+
+    var startHeroAutoplay = function () {
+      heroIntervalId = window.setInterval(function () {
+        setActiveHeroSlide(activeHeroIndex + 1);
+      }, 6000);
+    };
+
+    var resetHeroAutoplay = function () {
+      window.clearInterval(heroIntervalId);
+      startHeroAutoplay();
+    };
+
+    if (heroPrev) {
+      heroPrev.addEventListener('click', function () {
+        setActiveHeroSlide(activeHeroIndex - 1);
+        resetHeroAutoplay();
+      });
+    }
+
+    if (heroNext) {
+      heroNext.addEventListener('click', function () {
+        setActiveHeroSlide(activeHeroIndex + 1);
+        resetHeroAutoplay();
+      });
+    }
+
+    heroDots.forEach(function (dot, dotIndex) {
+      dot.addEventListener('click', function () {
+        setActiveHeroSlide(dotIndex);
+        resetHeroAutoplay();
+      });
+    });
+
+    heroSlider.addEventListener('mouseenter', function () {
+      window.clearInterval(heroIntervalId);
+    });
+
+    heroSlider.addEventListener('mouseleave', function () {
+      resetHeroAutoplay();
+    });
+
+    setActiveHeroSlide(activeHeroIndex);
+    startHeroAutoplay();
+  }
+
+  document.querySelectorAll('[data-filter-controls]').forEach(function (controls) {
+    var group = controls.getAttribute('data-filter-controls');
+    if (!group) return;
+
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-filter-button="' + group + '"]'));
+    var items = Array.prototype.slice.call(document.querySelectorAll('[data-filter-item="' + group + '"]'));
+
+    if (!buttons.length || !items.length) return;
+
+    var applyFilter = function (value) {
+      var normalizedValue = value || 'all';
+
+      buttons.forEach(function (button) {
+        var isActive = button.getAttribute('data-filter-value') === normalizedValue;
+        button.setAttribute('aria-pressed', String(isActive));
+
+        if (group === 'blog') {
+          button.classList.toggle('bg-[#111318]', isActive);
+          button.classList.toggle('text-white', isActive);
+          button.classList.toggle('bg-[#f0f2f4]', !isActive);
+          button.classList.toggle('text-[#616f89]', !isActive);
+        } else if (group === 'programs') {
+          button.classList.toggle('border-b-2', isActive);
+          button.classList.toggle('border-primary', isActive);
+          button.classList.toggle('text-slate-900', isActive);
+          button.classList.toggle('text-slate-500', !isActive);
+        }
+      });
+
+      items.forEach(function (item) {
+        var category = item.getAttribute('data-filter-category');
+        var showItem = normalizedValue === 'all' || category === normalizedValue;
+        item.classList.toggle('hidden', !showItem);
+      });
+    };
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        applyFilter(button.getAttribute('data-filter-value'));
+      });
+    });
+
+    applyFilter('all');
+  });
+
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
