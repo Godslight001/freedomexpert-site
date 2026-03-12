@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html class="light" lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>FreedomExpert Podcast | Freedom Conversations</title>
+    <title>FreedomExpert Podcast | Coming Soon</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
@@ -30,33 +29,27 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f6f6f8;
+            background-color: #101622;
         }
-        
-        .editorial-shadow {
-            box-shadow: 0 4px 20px -2px rgba(111, 66, 193, 0.08);
-        }
-        
+
         a[data-nav].active {
             color: #6F42C1;
             font-weight: 700;
         }
     </style>
 </head>
-
-<body data-page="resources" class="bg-background-light text-navy-accent antialiased">
-    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+<body data-page="resources" class="bg-background-dark text-white antialiased">
+    <header class="sticky top-0 z-50 w-full border-b border-white/10 bg-[#101622]/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             <a class="flex items-center gap-3" href="../index.html">
                 <img src="../assets/images/logo2.png" alt="FreedomExpert logo" class="h-10 w-auto max-w-[180px] object-contain">
-                
             </a>
 
             <nav class="hidden md:flex items-center gap-10">
-                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../index.html" data-nav="home">Home</a>
-                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../about/index.html" data-nav="about">About</a>
+                <a class="text-white/70 hover:text-primary transition-colors text-sm font-medium" href="../index.html" data-nav="home">Home</a>
+                <a class="text-white/70 hover:text-primary transition-colors text-sm font-medium" href="../about/index.html" data-nav="about">About</a>
                 <div class="relative">
-                    <button class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-1" type="button" aria-expanded="false" data-resources-trigger>Resources <span class="material-symbols-outlined text-base">expand_more</span></button>
+                    <button class="text-white/70 hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-1" type="button" aria-expanded="false" data-resources-trigger>Resources <span class="material-symbols-outlined text-base">expand_more</span></button>
                     <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden" data-resources-menu>
                         <div class="w-52 rounded-xl border border-primary/10 bg-white shadow-xl p-2">
                             <a class="block px-3 py-2 rounded-lg text-sm text-charcoal/80 hover:bg-primary/10 hover:text-primary" href="../resources/blog.html">Blog</a>
@@ -66,161 +59,59 @@
                         </div>
                     </div>
                 </div>
-                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../programs/index.html" data-nav="programs">Programs</a>
-                <a class="text-charcoal/70 hover:text-primary transition-colors text-sm font-medium" href="../contact/index.html" data-nav="contact">Contact</a>
+                <a class="text-white/70 hover:text-primary transition-colors text-sm font-medium" href="../programs/index.html" data-nav="programs">Programs</a>
+                <a class="text-white/70 hover:text-primary transition-colors text-sm font-medium" href="../contact/index.html" data-nav="contact">Contact</a>
             </nav>
 
             <div class="hidden md:flex items-center gap-4">
-
                 <a class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm" href="../contact/index.html">Get Started</a>
             </div>
 
-            <button class="md:hidden text-charcoal" aria-expanded="false" aria-label="Toggle menu" data-menu-toggle>
-      <span class="material-symbols-outlined text-3xl">menu</span>
-    </button>
+            <button class="md:hidden text-white" aria-expanded="false" aria-label="Toggle menu" data-menu-toggle>
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
         </div>
 
-        <ul class="hidden md:hidden px-6 pb-6 space-y-3 border-t border-gray-100" data-nav-links>
-            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium pt-4" href="../index.html" data-nav="home">Home</a></li>
-            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="../about/index.html" data-nav="about">About</a></li>
-            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="#" data-nav="resources">Resources</a></li>
-            <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/blog.html">- Blog</a></li>
-            <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/podcast.html">- Podcast</a></li>
-            <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/books.html">- Books</a></li>
-            <li><a class="block text-charcoal/60 hover:text-primary text-xs pl-4" href="../resources/downloads.html">- Downloads</a></li>
-            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="../programs/index.html" data-nav="programs">Programs</a></li>
-            <li><a class="block text-charcoal/80 hover:text-primary text-sm font-medium" href="../contact/index.html" data-nav="contact">Contact</a></li>
+        <ul class="hidden md:hidden px-6 pb-6 space-y-3 border-t border-white/10 bg-[#101622]" data-nav-links>
+            <li><a class="block text-white/80 hover:text-primary text-sm font-medium pt-4" href="../index.html" data-nav="home">Home</a></li>
+            <li><a class="block text-white/80 hover:text-primary text-sm font-medium" href="../about/index.html" data-nav="about">About</a></li>
+            <li><a class="block text-white/80 hover:text-primary text-sm font-medium" href="#" data-nav="resources">Resources</a></li>
+            <li><a class="block text-white/60 hover:text-primary text-xs pl-4" href="../resources/blog.html">- Blog</a></li>
+            <li><a class="block text-white/60 hover:text-primary text-xs pl-4" href="../resources/podcast.html">- Podcast</a></li>
+            <li><a class="block text-white/60 hover:text-primary text-xs pl-4" href="../resources/books.html">- Books</a></li>
+            <li><a class="block text-white/60 hover:text-primary text-xs pl-4" href="../resources/downloads.html">- Downloads</a></li>
+            <li><a class="block text-white/80 hover:text-primary text-sm font-medium" href="../programs/index.html" data-nav="programs">Programs</a></li>
+            <li><a class="block text-white/80 hover:text-primary text-sm font-medium" href="../contact/index.html" data-nav="contact">Contact</a></li>
             <li><a class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm" href="../contact/index.html">Get Started</a></li>
         </ul>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 lg:px-12 py-10">
-        <section class="relative w-full rounded-2xl overflow-hidden mb-16 group">
-            <div class="aspect-[21/9] w-full relative">
-                <img alt="FreedomExpert podcast visual" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://freedomexpert.ca/wp-content/uploads/2025/01/Freedom-expert-Podcast.webp" />
-                <div class="absolute inset-0 bg-gradient-to-r from-navy-accent/90 via-navy-accent/40 to-transparent flex flex-col justify-end p-8 lg:p-16">
-                    <div class="max-w-2xl">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">FreedomExpert Podcast</span>
-                            <span class="text-white/70 text-sm font-medium">Faith • Wisdom • Stewardship</span>
-                        </div>
-                        <h1 class="text-white text-4xl lg:text-5xl font-black leading-tight mb-4 tracking-tight">Freedom Conversations for Purpose-Driven Living</h1>
-                        <p class="text-white/80 text-lg mb-8 font-light">Sign up for the FreedomExpert and get notified when we have a new podcast.</p>
-                        <div class="flex items-center gap-4">
-                            <button class="bg-primary text-white flex items-center gap-2 py-4 px-8 rounded-xl font-bold hover:bg-white hover:text-primary transition-all shadow-xl shadow-primary/20"><span class="material-symbols-outlined fill-1">play_arrow</span>Play Now</button>
-                            <button class="bg-white/10 backdrop-blur-md text-white border border-white/20 p-4 rounded-xl hover:bg-white/20 transition-all"><span class="material-symbols-outlined">bookmark</span></button>
-                        </div>
+    <main>
+        <section class="relative min-h-[calc(100vh-5rem)] overflow-hidden">
+            <img src="https://freedomexpert.ca/wp-content/uploads/2025/01/Freedom-expert-Podcast.webp" alt="FreedomExpert podcast artwork" class="absolute inset-0 h-full w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#050816]/90 via-[#101622]/75 to-primary/40"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(111,66,193,0.45),transparent_35%)]"></div>
+
+            <div class="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl items-center px-6 py-16 lg:px-12">
+                <div class="max-w-3xl rounded-[2rem] border border-white/15 bg-white/8 p-8 shadow-2xl shadow-black/30 backdrop-blur-md lg:p-12">
+                    <span class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.28em] text-white/80">Podcast</span>
+                    <h1 class="mt-6 text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">Coming Soon</h1>
+                    <p class="mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
+                        The FreedomExpert podcast is being prepared with conversations on faith, stewardship, mindset, purpose, and practical wisdom for daily living.
+                    </p>
+                    <p class="mt-4 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
+                        We are building the experience carefully. Check back soon for the first episodes and future conversations.
+                    </p>
+
+                    <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+                        <a href="../contact/index.html" class="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary/90">Get Notified</a>
+                        <a href="../resources/blog.html" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white transition hover:bg-white/15">Read the Blog</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-gray-200 pb-8">
-            <div>
-                <h2 class="text-2xl font-bold text-navy-accent">Explore Conversations</h2>
-                <p class="text-gray-500 text-sm mt-1">Real FreedomExpert themes on mindset, purpose, and stewardship</p>
-            </div>
-            <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
-                <button class="bg-navy-accent text-white px-6 py-2 rounded-full text-sm font-bold shrink-0">All Episodes</button>
-                <button class="bg-white border border-gray-200 text-gray-600 px-6 py-2 rounded-full text-sm font-semibold hover:border-primary hover:text-primary transition-colors shrink-0">Faith</button>
-                <button class="bg-white border border-gray-200 text-gray-600 px-6 py-2 rounded-full text-sm font-semibold hover:border-primary hover:text-primary transition-colors shrink-0">Mindset</button>
-                <button class="bg-white border border-gray-200 text-gray-600 px-6 py-2 rounded-full text-sm font-semibold hover:border-primary hover:text-primary transition-colors shrink-0">Purpose</button>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="group bg-white rounded-2xl overflow-hidden editorial-shadow border border-gray-100 flex flex-col hover:border-primary/20 transition-all duration-300">
-                <div class="relative aspect-video overflow-hidden"><img alt="A Thief, Remembered" class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://freedomexpert.ca/wp-content/uploads/2025/04/Grok-Image-2025-04-19-at-10.51.55-am.webp" /></div>
-                <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center gap-2 mb-3"><span class="text-[10px] font-black bg-gray-100 text-gray-500 px-2 py-0.5 rounded">NEW</span><span class="text-xs text-gray-400 font-medium">April 18, 2025</span></div>
-                    <h3 class="text-xl font-bold text-navy-accent mb-3 group-hover:text-primary transition-colors">A Thief, Remembered</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">A soul-stirring reflection at Calvary: mercy, surrender, and the transforming power of grace.</p>
-                    <div class="mt-auto flex items-center justify-between"><button class="flex items-center gap-2 text-navy-accent hover:text-primary transition-colors font-bold text-sm uppercase tracking-wider"><span class="material-symbols-outlined text-xl">play_circle</span>Listen Now</button><span class="text-xs font-semibold text-gray-400">35 min</span></div>
-                </div>
-            </div>
-            <div class="group bg-white rounded-2xl overflow-hidden editorial-shadow border border-gray-100 flex flex-col hover:border-primary/20 transition-all duration-300">
-                <div class="relative aspect-video overflow-hidden"><img alt="The Jealous Moon" class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://freedomexpert.ca/wp-content/uploads/2025/03/image.webp" /></div>
-                <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center gap-2 mb-3"><span class="text-[10px] font-black bg-gray-100 text-gray-500 px-2 py-0.5 rounded">NEW</span><span class="text-xs text-gray-400 font-medium">March 15, 2025</span></div>
-                    <h3 class="text-xl font-bold text-navy-accent mb-3 group-hover:text-primary transition-colors">The Jealous Moon</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">A mindset-centered conversation on perception, response, and the lens through which we live.</p>
-                    <div class="mt-auto flex items-center justify-between"><button class="flex items-center gap-2 text-navy-accent hover:text-primary transition-colors font-bold text-sm uppercase tracking-wider"><span class="material-symbols-outlined text-xl">play_circle</span>Listen Now</button><span class="text-xs font-semibold text-gray-400">42 min</span></div>
-                </div>
-            </div>
-            <div class="group bg-white rounded-2xl overflow-hidden editorial-shadow border border-gray-100 flex flex-col hover:border-primary/20 transition-all duration-300">
-                <div class="relative aspect-video overflow-hidden"><img alt="Abel: A Mystical Life of Faith and Sacrifice" class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://freedomexpert.ca/wp-content/uploads/2025/02/cain-and-abel.webp" /></div>
-                <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center gap-2 mb-3"><span class="text-[10px] font-black bg-gray-100 text-gray-500 px-2 py-0.5 rounded">NEW</span><span class="text-xs text-gray-400 font-medium">February 14, 2025</span></div>
-                    <h3 class="text-xl font-bold text-navy-accent mb-3 group-hover:text-primary transition-colors">Abel: A Mystical Life of Faith and Sacrifice</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Faith, sacrifice, and devotion: lessons from Abel’s short but deeply significant life.</p>
-                    <div class="mt-auto flex items-center justify-between"><button class="flex items-center gap-2 text-navy-accent hover:text-primary transition-colors font-bold text-sm uppercase tracking-wider"><span class="material-symbols-outlined text-xl">play_circle</span>Listen Now</button><span class="text-xs font-semibold text-gray-400">39 min</span></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex items-center justify-center gap-2 mt-16 py-8"><button class="size-10 flex items-center justify-center rounded-lg hover:bg-white text-gray-400"><span class="material-symbols-outlined">chevron_left</span></button><button class="size-10 flex items-center justify-center rounded-lg bg-navy-accent text-white font-bold">1</button>
-            <button class="size-10 flex items-center justify-center rounded-lg hover:bg-white text-gray-500 font-semibold">2</button><button class="size-10 flex items-center justify-center rounded-lg hover:bg-white text-gray-500 font-semibold">3</button>
-            <button class="size-10 flex items-center justify-center rounded-lg hover:bg-white text-gray-400"><span class="material-symbols-outlined">chevron_right</span></button>
-        </div>
     </main>
-
-    <div class="fixed bottom-0 inset-x-0 bg-navy-accent text-white h-20 z-40 shadow-2xl flex items-center px-6 lg:px-12 border-t border-white/5">
-        <div class="flex-1 flex items-center gap-4"><img alt="Current Episode Artwork" class="size-12 rounded object-cover border border-white/10" src="https://freedomexpert.ca/wp-content/uploads/2025/04/Grok-Image-2025-04-19-at-10.51.55-am.webp" />
-            <div class="max-w-xs">
-                <p class="text-sm font-bold truncate">A Thief, Remembered</p>
-                <p class="text-xs text-white/50 truncate">Latest Conversation • Now Playing</p>
-            </div>
-        </div>
-        <div class="hidden md:flex items-center gap-5"><button><span class="material-symbols-outlined">skip_previous</span></button><button class="size-10 bg-white text-navy-accent rounded-full flex items-center justify-center"><span class="material-symbols-outlined fill-1">pause</span></button><button><span class="material-symbols-outlined">skip_next</span></button></div>
-    </div>
-
-    <footer class="bg-white pt-20 pb-12 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="../assets/images/logo2.png" alt="FreedomExpert logo" class="h-9 w-auto max-w-[160px] object-contain">
-                        
-                    </div>
-                    <p class="text-charcoal/50 text-sm leading-loose">Empowering believers to master their finances and live out their God-given mission through editorial excellence.</p>
-                </div>
-                <div class="col-span-1">
-                    <h5 class="text-charcoal font-bold text-sm uppercase tracking-widest mb-6">Platform</h5>
-                    <ul class="space-y-4">
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../resources/podcast.html">Curriculum</a></li>
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../resources/podcast.html">Podcasts</a></li>
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../resources/blog.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="col-span-1">
-                    <h5 class="text-charcoal font-bold text-sm uppercase tracking-widest mb-6">About</h5>
-                    <ul class="space-y-4">
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../about/index.html">Our Story</a></li>
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../about/index.html">Mission</a></li>
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../contact/index.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-span-1">
-                    <h5 class="text-charcoal font-bold text-sm uppercase tracking-widest mb-6">Legal</h5>
-                    <ul class="space-y-4">
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../privacy-policy.html">Privacy Policy</a></li>
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../terms-of-service.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-charcoal/40 text-xs">© 2026 FreedomExpert Platform. All rights reserved.</p>
-                <div class="flex items-center gap-6">
-                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.linkedin.com/in/freedom-expert-9558373b5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.369-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.063 2.063 0 110-4.126 2.063 2.063 0 010 4.126zM7.114 20.452H3.56V9h3.554v11.452z"></path></svg></a>
-                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://x.com/fexphq/" target="_blank" rel="noopener noreferrer" aria-label="X"><svg class="size-5" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a>
-                    <a class="text-charcoal/40 hover:text-primary transition-colors" href="https://www.whatsapp.com/channel/0029Vb8BHvE3LdQOnvdV6l26" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel"><svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.8 11.8 0 0012.07 0C5.5 0 .16 5.34.16 11.92c0 2.1.55 4.16 1.6 5.98L0 24l6.27-1.64a11.9 11.9 0 005.8 1.48h.01c6.57 0 11.91-5.34 11.91-11.92 0-3.18-1.24-6.17-3.47-8.44zM12.08 21.8h-.01a9.86 9.86 0 01-5.03-1.38l-.36-.21-3.72.98 1-3.63-.24-.37a9.86 9.86 0 01-1.52-5.27c0-5.45 4.43-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.8 9.8 0 012.9 6.98c0 5.45-4.43 9.88-9.88 9.88zm5.42-7.42c-.3-.15-1.77-.88-2.04-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.8-1.67-2.1-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.53.08-.8.38s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.13 4.55.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"></path></svg></a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="../assets/js/main.js"></script>
 </body>
-
 </html>
-
