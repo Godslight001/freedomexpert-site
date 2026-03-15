@@ -144,7 +144,7 @@
                     <div class="grid w-full max-w-[430px] gap-4 rounded-[32px] border border-primary/15 bg-white p-5 shadow-[0_28px_60px_-24px_rgba(75,46,131,0.32)]">
                         <div class="relative overflow-hidden rounded-[24px] border border-primary/10 bg-[#f3eefc]">
                             <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/60 to-transparent"></div>
-                            <img class="aspect-[3/4] w-full object-cover" src="https://freedomexpert.ca/wp-content/uploads/2025/01/TTP-The-Treasure-Principle1.png.webp" alt="The Treasure Principle book cover" />
+                            <img class="aspect-[3/4] w-full object-cover" src="../assets/images/books/the-treasure-principle-randy-alcorn.jpg" alt="The Treasure Principle book cover" />
                         </div>
                         <div class="rounded-[24px] bg-[#faf7ff] px-5 py-5">
                             <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">Featured Starter</p>
@@ -1030,24 +1030,6 @@
             return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
         }
 
-        function normalizeLookupValue(value) {
-            return String(value || "")
-                .replace(/[Ã¢â‚¬â„¢']/g, "")
-                .replace(/[:!?.,]/g, " ")
-                .replace(/\s+/g, " ")
-                .trim();
-        }
-
-        function getAuthorVariants(author) {
-            const variants = new Set([author, normalizeLookupValue(author)]);
-            if (author === "Dwight L. Moody") variants.add("D. L. Moody");
-            if (author === "D. L. Moody") variants.add("Dwight L. Moody");
-            if (author === "Marc Reklah") variants.add("Marc Reklau");
-            if (author === "Marc Reklau") variants.add("Marc Reklah");
-            if (author === "A. W. Tozer") variants.add("AW Tozer");
-            return Array.from(variants).filter(Boolean);
-        }
-
         function slugifyCoverSegment(value) {
             return String(value || "")
                 .normalize("NFKD")
@@ -1070,153 +1052,17 @@
 
         const coverUrlCache = new Map();
         const manualCoverMap = {
-            "The Treasure Principle||Randy Alcorn": "../assets/images/books/the-treasure-principle-randy-alcorn.jpg",
-            "Managing God's Money||Randy Alcorn": "../assets/images/books/managing-gods-money-randy-alcorn.jpg",
-            "Giving and Tithing||Larry Burkett": "https://books.google.com/books/content?id=xloid_z5zgYC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Your Money Counts||Howard Dayton": "https://books.google.com/books/content?id=40GuMXD4zysC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Master Your Money||Ron Blue": "https://books.google.com/books/content?id=mZ4DCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "God Owns It All||Ron Blue": "../assets/images/books/god-owns-it-all-ron-blue.jpg",
-            "The Mandate of Origins||Simi Uzamere": "../assets/images/Title 2.jpg",
-            "An Enemy Called Average||John Mason": "https://books.google.com/books/content?id=oFJAnwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Think and Grow Rich||Napoleon Hill": "../assets/images/books/think-and-grow-rich-napoleon-hill.jpg",
-            "The Four Elements of Success||Laurie Beth Jones": "../assets/images/books/the-four-elements-of-success-laurie-beth-jones.jpg",
-            "In Pursuit of Purpose||Myles Munroe": "https://covers.openlibrary.org/b/id/11274415-L.jpg",
-            "The Principles and Power of Vision||Myles Munroe": "../assets/images/books/the-principles-and-power-of-vision-myles-munroe.jpg",
-            "The Principles and Power of Kingdom Citizenship||Myles Munroe": "https://books.google.com/books/content?id=DCxDCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Becoming a Leader||Myles Munroe": "../assets/images/books/becoming-a-leader-myles-munroe.jpg",
-            "The Fatherhood Principle||Myles Munroe": "https://books.google.com/books/content?id=MiL2BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "In Charge||Myles Munroe": "../assets/images/books/in-charge-myles-munroe.jpg",
             "Built to Last||Simi Uzamere": "../assets/images/Title 1.jpg",
-            "The Total Money Makeover Workbook||Dave Ramsey": "../assets/images/books/the-total-money-makeover-workbook-dave-ramsey.jpg",
-            "The School of Money||Olumide Emmanuel": "https://books.google.com/books/content?id=lL7rV9Z7qhkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Abnormal Psychology||David J. A. Dozois": "../assets/images/books/abnormal-psychology-david-j-a-dozois.jpg",
-            "How Much Land Does a Man Need?||Leo Tolstoy": "https://books.google.com/books/content?id=lCRdEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Bertha Takes a Drive||Jan Adkins": "https://books.google.com/books/content?id=IdgzDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Total Money Makeover||Dave Ramsey": "https://books.google.com/books/content?id=DpqPwAk8UvYC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Financial Peace Revisited||Dave Ramsey": "https://covers.openlibrary.org/b/id/10512713-L.jpg",
-            "The Legacy Journey||Dave Ramsey": "https://books.google.com/books/content?id=OMeSDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "EntreLeadership||Dave Ramsey": "https://books.google.com/books/content?id=A82WBAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Baby Steps Millionaires||Dave Ramsey": "https://books.google.com/books/content?id=Q_1NEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "From Trials to Triumphs: The Coscharis Story||Ambassadors I. D. Williams and N. A. Williams": "../assets/images/books/from-trials-to-triumphs-the-coscharis-story.jpg",
-            "The Bible from 30,000 Feet||Skip Heitzig": "https://books.google.com/books/content?id=70EoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Purpose Driven Life||Rick Warren": "https://books.google.com/books/content?id=RHewj3pyXNsC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Pursuit of God||A. W. Tozer": "https://books.google.com/books/content?id=t46cEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Disciples of Christ||A. W. Tozer": "../assets/images/books/disciples-of-christ-a-w-tozer.jpg",
-            "The Reality of Prayer||E. M. Bounds": "https://books.google.com/books/content?id=EHhGPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Prevailing Prayer||Dwight L. Moody": "https://books.google.com/books/content?id=04H3EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Secret Power||D. L. Moody": "../assets/images/books/secret-power-d-l-moody.jpg",
-            "Born to Reproduce||Dawson Trotman": "../assets/images/books/born-to-reproduce-dawson-trotman.jpg",
-            "Unleashing the Power of Praise||Merlin R. Carothers": "https://books.google.com/books/content?id=1BQdH0nIPgsC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "Pulling Down Strongholds||Derek Prince": "../assets/images/books/pulling-down-strongholds-derek-prince.jpg",
-            "God's Remedy for Rejection||Derek Prince": "../assets/images/books/gods-remedy-for-rejection-derek-prince.jpg",
-            "Secrets of a Prayer Warrior||Derek Prince": "https://books.google.com/books/content?id=vRn2HXK0hc0C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Breaking Through the Outer Man into the Spirit||Watchman Nee": "https://books.google.com/books/content?id=1rulEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Life That Wins||Watchman Nee": "https://books.google.com/books/content?id=BIkYNC_puR8C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Humility: The Beauty of Holiness||Andrew Murray": "https://books.google.com/books/content?id=aT0gEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Backslider: How Christians Drift and Return||Andrew Fuller": "https://books.google.com/books/content?id=bt-dDAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Mind of Christ||Emmet Fox": "https://books.google.com/books/content?id=WdhY2eAERBUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Sermon on the Mount||Emmet Fox": "../assets/images/books/the-sermon-on-the-mount-emmet-fox.jpg",
-            "I Am Parables||Emmet Fox": "https://books.google.com/books/content?id=DtqREQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Kingdom of God Is Within You||Emmet Fox": "https://books.google.com/books/content?id=gLoWG_F-Ei4C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "As a Man Thinketh||James Allen": "https://books.google.com/books/content?id=mzqmEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Emotional Intelligence||Daniel Goleman": "https://books.google.com/books/content?id=Lq18kigs7m0C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Power of Not Reacting||Justice Malcolm": "https://books.google.com/books/content?id=BBWn0QEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Surrounded by Idiots||Thomas Erikson": "https://books.google.com/books/content?id=BZl1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Read People Like a Book||Patrick King": "https://books.google.com/books/content?id=A1wezgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Anxious Generation||Jonathan Haidt": "../assets/images/books/the-anxious-generation-jonathan-haidt.jpg",
-            "Becoming a Person of Influence||John C. Maxwell": "https://books.google.com/books/content?id=PqlZYgX55vUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Difference Maker||John C. Maxwell": "https://books.google.com/books/content?id=zig4-x2oB1sC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The 21 Irrefutable Laws of Leadership||John C. Maxwell": "https://books.google.com/books/content?id=p-NaVKOmmG4C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The 5 Levels of Leadership||John C. Maxwell": "https://books.google.com/books/content?id=IaEzygAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Self-Aware Leader||John C. Maxwell": "https://books.google.com/books/content?id=SQklEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "25 Ways to Win with People||John C. Maxwell": "https://books.google.com/books/content?id=habV8VS6uTAC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The 17 Irrefutable Laws of Teamwork||John C. Maxwell": "https://books.google.com/books/content?id=dDCBLbNk-9AC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The 21 Irrefutable Qualities of a Leader||John C. Maxwell": "https://books.google.com/books/content?id=8JIs89Yi_jAC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Developing the Leader Within You 2.0||John C. Maxwell": "https://books.google.com/books/content?id=3KLvgovN1MMC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Success Is a Choice||John C. Maxwell": "../assets/images/books/success-is-a-choice-john-c-maxwell.jpg",
-            "Attitude 101||John C. Maxwell": "https://books.google.com/books/content?id=_bieDAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Feeling Forward||John C. Maxwell": "https://books.google.com/books/content?id=jsYnPLniBtkC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The ABC of Money||Andrew Carnegie": "https://books.google.com/books/content?id=euAxCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Richest Man in Babylon||George S. Clason": "https://books.google.com/books/content?id=jU_-EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Millionaire Next Door||Thomas J. Stanley": "../assets/images/books/the-millionaire-next-door-thomas-j-stanley.jpg",
-            "The Law of Success||Napoleon Hill": "https://books.google.com/books/content?id=Hdf3DwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "You Were Born Rich||Bob Proctor": "https://books.google.com/books/content?id=6GF6EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Wealth Consciousness||Christopher Huffman": "../assets/images/books/wealth-consciousness-christopher-huffman.jpg",
-            "The Law of Money||Justice Malcolm": "https://books.google.com/books/content?id=UYEjDgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The 38 Letters from J.D. Rockefeller to His Son||John D. Rockefeller": "https://books.google.com/books/content?id=WGUN0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "365 Ways to Love Your Child||Julie Lavender": "https://covers.openlibrary.org/b/id/10527772-L.jpg",
-            "Bringing Up Boys||James Dobson": "https://books.google.com/books/content?id=AuWdYvNiekYC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Bringing Up Girls||James Dobson": "https://books.google.com/books/content?id=OK47J_jXMWUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Bringing Up the Boy||Carl Werner": "https://books.google.com/books/content?id=X81X0QEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "How to Attract Everyone You Meet||Marc Reklah": "https://books.google.com/books/content?id=5Z56EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Give and Take||Adam Grant": "https://books.google.com/books/content?id=XqWlC2wvDdsC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "King, Warrior, Magician, Lover||Robert Moore": "https://books.google.com/books/content?id=TU4gAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "The Samson Syndrome||Mark Atteberry": "https://books.google.com/books/content?id=onlfEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "No More Mr. Nice Guy||Robert Glover": "../assets/images/books/no-more-mr-nice-guy-robert-glover.jpg",
-            "Eat That Frog!||Brian Tracy": "https://books.google.com/books/content?id=MRbVRdmP630C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Who Moved My Cheese?||Spencer Johnson": "../assets/images/books/who-moved-my-cheese-spencer-johnson.jpg",
-            "Christian Coaching||Gary R. Collins": "../assets/images/books/christian-coaching-gary-r-collins.jpg"
+            "The Mandate of Origins||Simi Uzamere": "../assets/images/Title 2.jpg"
         };
 
         function cacheKey(title, author) {
-            return "v13||" + title + "||" + author;
+            return "v15||" + title + "||" + author;
         }
 
         function manualCoverKey(title, author) {
             return `${title}||${author}`;
         }
-
-        const preferRemoteCoverKeys = new Set([
-            "God Owns It All||Ron Blue",
-            "The Principles and Power of Vision||Myles Munroe",
-            "Secret Power||D. L. Moody",
-            "Born to Reproduce||Dawson Trotman",
-            "Unleashing the Power of Praise||Merlin R. Carothers",
-            "God's Remedy for Rejection||Derek Prince",
-            "The Life That Wins||Watchman Nee",
-            "The Backslider: How Christians Drift and Return||Andrew Fuller",
-            "As a Man Thinketh||James Allen",
-            "The Power of Not Reacting||Justice Malcolm",
-            "Becoming a Person of Influence||John C. Maxwell",
-            "Wealth Consciousness||Christopher Huffman",
-            "How to Attract Everyone You Meet||Marc Reklah",
-            "King, Warrior, Magician, Lover||Robert Moore",
-            "No More Mr. Nice Guy||Robert Glover",
-            "To the Golden Shore: The Life of Adoniram Judson||Courtney Anderson",
-            "Cherish||Gary Thomas",
-            "Sacred Marriage||Gary Thomas",
-            "The Meaning of Marriage||Timothy Keller",
-            "Absolute Surrender||Andrew Murray",
-            "The Power in the Blood of Jesus||Andrew Murray",
-            "Pleasure and Profit in Bible Study||Dwight L. Moody",
-            "Seven Things the Holy Spirit Will Do for You||Chris Oyakhilome",
-            "The Seven Spirits of God||Chris Oyakhilome",
-            "How to Make Your Faith Work||Chris Oyakhilome",
-            "The Power of Tongues||Chris Oyakhilome",
-            "Making Maximum Impact||David Oyedepo",
-            "Breaking the Curses of Life||David Oyedepo",
-            "Satan Get Lost||David Oyedepo",
-            "The Six Great Problems of Life: God's Answers||G. Campbell Morgan",
-            "365 Ways to Love Your Child||Julie Lavender",
-            "Financial Peace Revisited||Dave Ramsey",
-            "In Pursuit of Purpose||Myles Munroe",
-            "Waiting and Dating||Myles Munroe",
-            "The Seven Habits of Highly Effective People||Stephen R. Covey",
-            "Start with Why||Simon Sinek",
-            "Extreme Ownership||Jocko Willink & Leif Babin",
-            "The Diary of a CEO||Steven Bartlett",
-            "Good to Great||Jim Collins",
-            "The Laws of Human Nature||Robert Greene",
-            "The Body Keeps the Score||Bessel van der Kolk",
-            "Man's Search for Meaning||Viktor E. Frankl",
-            "The Passport of Mallam Ilia||Cyprian Ekwensi",
-            "Good Strategy/Bad Strategy||Richard Rumelt",
-            "The Quest: Energy, Security, and the Remaking of the Modern World||Daniel Yergin",
-            "How to Think Like Benjamin Graham and Invest Like Warren Buffett||Lawrence A. Cunningham",
-            "How to Talk to Anyone: 92 Little Tricks for Big Success in Relationships||Leil Lowndes",
-            "The Mother at Home||John S. C. Abbott",
-            "The Child at Home||John S. C. Abbott"
-        ]);
 
         function getCachedCoverUrl(title, author) {
             const key = cacheKey(title, author);
@@ -1242,17 +1088,6 @@
             } catch (error) {}
         }
 
-        async function fetchJsonWithTimeout(url, timeoutMs) {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
-            const response = await fetch(url, {
-                signal: controller.signal
-            });
-            clearTimeout(timeoutId);
-            if (!response.ok) throw new Error("Request failed");
-            return response.json();
-        }
-
         async function probeImage(url, timeoutMs) {
             return new Promise((resolve) => {
                 const probe = new Image();
@@ -1274,182 +1109,32 @@
             });
         }
 
-        async function pickBestCover(candidates) {
-            for (const url of candidates) {
-                if (!url) continue;
-                const result = await probeImage(url, 3000);
-                if (!result.ok) continue;
-                if (result.width < 180 || result.height < 260) continue;
-                return url;
-            }
-            return null;
-        }
-
-        async function tryGoogleCover(title, author) {
-            const queries = [
-                `intitle:${title}+inauthor:${author}`,
-                `intitle:${normalizeLookupValue(title)}+inauthor:${normalizeLookupValue(author)}`,
-                `intitle:${title}`,
-                `"${title}" ${author}`,
-                normalizeLookupValue(title)
-            ];
-
-            for (const query of queries) {
-                try {
-                    const googleEndpoint =
-                        "https://www.googleapis.com/books/v1/volumes?q=" +
-                        encodeURIComponent(query) +
-                        "&maxResults=3";
-                    const googleData = await fetchJsonWithTimeout(googleEndpoint, 4000);
-                    const items = (googleData && googleData.items) || [];
-
-                    for (const item of items) {
-                        const imageLinks = item && item.volumeInfo && item.volumeInfo.imageLinks;
-                        const googleVolumeId = item && item.id;
-                        const googleCover =
-                            imageLinks &&
-                            (imageLinks.extraLarge ||
-                                imageLinks.large ||
-                                imageLinks.medium ||
-                                imageLinks.small ||
-                                imageLinks.thumbnail ||
-                                imageLinks.smallThumbnail);
-
-                        const googleApiCover = googleVolumeId ?
-                            "https://books.google.com/books/content?id=" +
-                            encodeURIComponent(googleVolumeId) +
-                            "&printsec=frontcover&img=1&zoom=3&source=gbs_api" :
-                            null;
-
-                        const hdGoogleCover = googleCover ?
-                            googleCover
-                            .replace("http://", "https://")
-                            .replace("zoom=1", "zoom=3")
-                            .replace("&edge=curl", "") :
-                            null;
-
-                        const verifiedGoogleCover = await pickBestCover([googleApiCover, hdGoogleCover]);
-                        if (verifiedGoogleCover) return verifiedGoogleCover;
-                    }
-                } catch (error) {}
-            }
-
-            return null;
-        }
-
-        async function tryOpenLibraryCover(title, author) {
-            const authorVariants = getAuthorVariants(author);
-            const queries = [
-                {
-                    title,
-                    author
-                },
-                {
-                    title: normalizeLookupValue(title),
-                    author: normalizeLookupValue(author)
-                },
-                {
-                    title,
-                    author: ""
-                }
-            ];
-
-            for (const query of queries) {
-                const authorsToTry = query.author ? [query.author, ...authorVariants] : [""];
-
-                for (const authorCandidate of authorsToTry) {
-                    try {
-                        const openLibraryEndpoint =
-                            "https://openlibrary.org/search.json?title=" +
-                            encodeURIComponent(query.title) +
-                            (authorCandidate ? "&author=" + encodeURIComponent(authorCandidate) : "") +
-                            "&limit=5";
-                        const openLibraryData = await fetchJsonWithTimeout(openLibraryEndpoint, 4000);
-                        const docs = (openLibraryData && openLibraryData.docs) || [];
-
-                        for (const doc of docs) {
-                            const coverId = doc && doc.cover_i;
-                            const openLibraryCover = coverId ?
-                                "https://covers.openlibrary.org/b/id/" + coverId + "-L.jpg" :
-                                null;
-                            const openLibraryMedium = coverId ?
-                                "https://covers.openlibrary.org/b/id/" + coverId + "-M.jpg" :
-                                null;
-                            const verifiedOpenLibraryCover = await pickBestCover([openLibraryCover, openLibraryMedium]);
-                            if (verifiedOpenLibraryCover) return verifiedOpenLibraryCover;
-                        }
-                    } catch (error) {}
-                }
-            }
-
-            return null;
-        }
-
         async function loadBookCover(img, title, author) {
             const coverKey = manualCoverKey(title, author);
-            const prefersRemoteCover = preferRemoteCoverKeys.has(coverKey);
             const manualCover = manualCoverMap[coverKey];
 
-            if (prefersRemoteCover) {
-                if (manualCover) {
-                    img.src = manualCover;
-                    return;
-                }
+            if (manualCover) {
+                img.src = manualCover;
+                return;
+            }
 
-                const cachedRemote = getCachedCoverUrl(title, author);
-                if (cachedRemote) {
-                    img.src = cachedRemote;
-                    return;
-                }
-            } else {
+            const cached = getCachedCoverUrl(title, author);
+            if (cached && !cached.startsWith("http") && !cached.endsWith(".svg")) {
+                img.src = cached;
+                return;
+            }
+
+            for (const candidate of localCoverCandidates(title, author)) {
                 try {
-                    const localCover = await pickBestCover(localCoverCandidates(title, author));
-                    if (localCover) {
-                        img.src = localCover;
-                        setCachedCoverUrl(title, author, localCover);
-                        return;
-                    }
+                    const result = await probeImage(candidate, 3000);
+                    if (!result.ok) continue;
+                    img.src = candidate;
+                    setCachedCoverUrl(title, author, candidate);
+                    return;
                 } catch (error) {}
-
-                if (manualCover) {
-                    img.src = manualCover;
-                    return;
-                }
-
-                const cached = getCachedCoverUrl(title, author);
-                if (cached) {
-                    img.src = cached;
-                    return;
-                }
             }
 
-            try {
-                const googleCover = await tryGoogleCover(title, author);
-                if (googleCover) {
-                    img.src = googleCover;
-                    setCachedCoverUrl(title, author, googleCover);
-                    return;
-                }
-            } catch (error) {}
-
-            try {
-                const openLibraryCover = await tryOpenLibraryCover(title, author);
-                const finalCover = openLibraryCover || (!prefersRemoteCover ? manualCover : null) || fallbackCover(title, author);
-                img.src = finalCover;
-                setCachedCoverUrl(title, author, finalCover);
-            } catch (error) {
-                if (!prefersRemoteCover) {
-                    try {
-                        const localCover = await pickBestCover(localCoverCandidates(title, author));
-                        if (localCover) {
-                            img.src = localCover;
-                            return;
-                        }
-                    } catch (nestedError) {}
-                }
-
-                img.src = manualCover || fallbackCover(title, author);
-            }
+            img.src = fallbackCover(title, author);
         }
 
         function renderBooks() {
