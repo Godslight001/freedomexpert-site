@@ -1080,7 +1080,7 @@
             "An Enemy Called Average||John Mason": "https://books.google.com/books/content?id=oFJAnwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "Think and Grow Rich||Napoleon Hill": "../assets/images/books/think-and-grow-rich-napoleon-hill.jpg",
             "The Four Elements of Success||Laurie Beth Jones": "../assets/images/books/the-four-elements-of-success-laurie-beth-jones.jpg",
-            "In Pursuit of Purpose||Myles Munroe": "../assets/images/books/in-pursuit-of-purpose-myles-munroe.jpg",
+            "In Pursuit of Purpose||Myles Munroe": "https://covers.openlibrary.org/b/id/11274415-L.jpg",
             "The Principles and Power of Vision||Myles Munroe": "../assets/images/books/the-principles-and-power-of-vision-myles-munroe.jpg",
             "The Principles and Power of Kingdom Citizenship||Myles Munroe": "https://books.google.com/books/content?id=DCxDCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "Becoming a Leader||Myles Munroe": "../assets/images/books/becoming-a-leader-myles-munroe.jpg",
@@ -1093,7 +1093,7 @@
             "How Much Land Does a Man Need?||Leo Tolstoy": "https://books.google.com/books/content?id=lCRdEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "Bertha Takes a Drive||Jan Adkins": "https://books.google.com/books/content?id=IdgzDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "The Total Money Makeover||Dave Ramsey": "https://books.google.com/books/content?id=DpqPwAk8UvYC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "Financial Peace Revisited||Dave Ramsey": "../assets/images/books/financial-peace-revisited-dave-ramsey.jpg",
+            "Financial Peace Revisited||Dave Ramsey": "https://covers.openlibrary.org/b/id/10512713-L.jpg",
             "The Legacy Journey||Dave Ramsey": "https://books.google.com/books/content?id=OMeSDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "EntreLeadership||Dave Ramsey": "https://books.google.com/books/content?id=A82WBAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "Baby Steps Millionaires||Dave Ramsey": "https://books.google.com/books/content?id=Q_1NEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
@@ -1106,7 +1106,7 @@
             "Prevailing Prayer||Dwight L. Moody": "https://books.google.com/books/content?id=04H3EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "Secret Power||D. L. Moody": "../assets/images/books/secret-power-d-l-moody.jpg",
             "Born to Reproduce||Dawson Trotman": "../assets/images/books/born-to-reproduce-dawson-trotman.jpg",
-            "Unleashing the Power of Praise||Merlin R. Carothers": "https://books.google.com/books/content?id=1BQdH0nIPgsC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "Unleashing the Power of Praise||Merlin R. Carothers": "https://books.google.com/books/content?id=1BQdH0nIPgsC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
             "Pulling Down Strongholds||Derek Prince": "../assets/images/books/pulling-down-strongholds-derek-prince.jpg",
             "God's Remedy for Rejection||Derek Prince": "../assets/images/books/gods-remedy-for-rejection-derek-prince.jpg",
             "Secrets of a Prayer Warrior||Derek Prince": "https://books.google.com/books/content?id=vRn2HXK0hc0C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
@@ -1144,7 +1144,7 @@
             "Wealth Consciousness||Christopher Huffman": "../assets/images/books/wealth-consciousness-christopher-huffman.jpg",
             "The Law of Money||Justice Malcolm": "https://books.google.com/books/content?id=UYEjDgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "The 38 Letters from J.D. Rockefeller to His Son||John D. Rockefeller": "https://books.google.com/books/content?id=WGUN0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "365 Ways to Love Your Child||Julie Lavender": "https://books.google.com/books/content?id=3cNWzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "365 Ways to Love Your Child||Julie Lavender": "https://covers.openlibrary.org/b/id/10527772-L.jpg",
             "Bringing Up Boys||James Dobson": "https://books.google.com/books/content?id=AuWdYvNiekYC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "Bringing Up Girls||James Dobson": "https://books.google.com/books/content?id=OK47J_jXMWUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
             "Bringing Up the Boy||Carl Werner": "https://books.google.com/books/content?id=X81X0QEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
@@ -1159,7 +1159,7 @@
         };
 
         function cacheKey(title, author) {
-            return "v11||" + title + "||" + author;
+            return "v13||" + title + "||" + author;
         }
 
         function manualCoverKey(title, author) {
@@ -1197,6 +1197,9 @@
             "Breaking the Curses of Life||David Oyedepo",
             "Satan Get Lost||David Oyedepo",
             "The Six Great Problems of Life: God's Answers||G. Campbell Morgan",
+            "365 Ways to Love Your Child||Julie Lavender",
+            "Financial Peace Revisited||Dave Ramsey",
+            "In Pursuit of Purpose||Myles Munroe",
             "Waiting and Dating||Myles Munroe",
             "The Seven Habits of Highly Effective People||Stephen R. Covey",
             "Start with Why||Simon Sinek",
@@ -1385,8 +1388,14 @@
         async function loadBookCover(img, title, author) {
             const coverKey = manualCoverKey(title, author);
             const prefersRemoteCover = preferRemoteCoverKeys.has(coverKey);
+            const manualCover = manualCoverMap[coverKey];
 
             if (prefersRemoteCover) {
+                if (manualCover) {
+                    img.src = manualCover;
+                    return;
+                }
+
                 const cachedRemote = getCachedCoverUrl(title, author);
                 if (cachedRemote) {
                     img.src = cachedRemote;
@@ -1402,7 +1411,6 @@
                     }
                 } catch (error) {}
 
-                const manualCover = manualCoverMap[coverKey];
                 if (manualCover) {
                     img.src = manualCover;
                     return;
@@ -1426,7 +1434,7 @@
 
             try {
                 const openLibraryCover = await tryOpenLibraryCover(title, author);
-                const finalCover = openLibraryCover || (!prefersRemoteCover ? manualCoverMap[coverKey] : null) || fallbackCover(title, author);
+                const finalCover = openLibraryCover || (!prefersRemoteCover ? manualCover : null) || fallbackCover(title, author);
                 img.src = finalCover;
                 setCachedCoverUrl(title, author, finalCover);
             } catch (error) {
@@ -1440,7 +1448,6 @@
                     } catch (nestedError) {}
                 }
 
-                const manualCover = manualCoverMap[coverKey];
                 img.src = manualCover || fallbackCover(title, author);
             }
         }
