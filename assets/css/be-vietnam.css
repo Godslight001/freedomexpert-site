@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'BeVietnam';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/bevietnampro/v12/QdVMSTAyLFyeg_IDWvOJmVES_HScJ18y.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BeVietnam';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/bevietnampro/v12/QdVMSTAyLFyeg_IDWvOJmVES_HSMIF8y.ttf') format('truetype');
+}
+
+h1:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif),
+h2:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif),
+h3:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif),
+h4:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif),
+h5:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif),
+h6:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif) {
+  font-family: 'Inter', sans-serif !important;
+}

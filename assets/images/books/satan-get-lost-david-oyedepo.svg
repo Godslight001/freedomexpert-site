@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-label="Satan Get Lost cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f0ff"/>
+      <stop offset="100%" stop-color="#eadbff"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#bg)"/>
+  <rect x="36" y="36" width="528" height="828" rx="28" fill="#ffffff" fill-opacity="0.84" stroke="#c9acef" stroke-width="3"/>
+  <text x="70" y="120" fill="#6f42c1" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="3">FREEDOMEXPERT</text>
+  <text x="70" y="220" fill="#221934" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">
+    <tspan x="70" dy="0">Satan Get Lost</tspan>
+  </text>
+  <text x="70" y="700" fill="#5b4a78" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">
+    <tspan x="70" dy="0">David Oyedepo</tspan>
+  </text>
+</svg>
