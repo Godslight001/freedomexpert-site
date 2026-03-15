@@ -19,10 +19,11 @@
 html, body { margin: 0; padding: 0; }
 
 body {
-  font-family: 'Sora', sans-serif;
+  font-family: 'BeVietnam', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   color: var(--ink);
   background: radial-gradient(circle at 0% 0%, #efe4ff 0%, #faf9fd 40%), var(--bg);
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
 }
 
 
@@ -37,8 +38,8 @@ textarea,
 select,
 .lead {
   font-family: 'BeVietnam', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
 }
 
 a { color: inherit; text-decoration: none; }

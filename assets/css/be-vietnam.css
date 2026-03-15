@@ -1,17 +1,39 @@
 @font-face {
-  font-family: 'BeVietnam';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/bevietnampro/v12/QdVMSTAyLFyeg_IDWvOJmVES_HScJ18y.ttf') format('truetype');
+    font-family: 'BeVietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/bevietnampro/v12/QdVMSTAyLFyeg_IDWvOJmVES_HScJ18y.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'BeVietnam';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/bevietnampro/v12/QdVMSTAyLFyeg_IDWvOJmVES_HSMIF8y.ttf') format('truetype');
+    font-family: 'BeVietnam';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/bevietnampro/v12/QdVMSTAyLFyeg_IDWvOJmVES_HSMIF8y.ttf') format('truetype');
+}
+
+body {
+  font-family: 'BeVietnam', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+p,
+li,
+blockquote {
+  font-family: 'BeVietnam', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.7rem !important;
+}
+
+header nav a,
+header [data-nav-links] a,
+header button[data-resources-trigger],
+footer a {
+  font-size: 1.2rem !important;
+  line-height: 1.7rem !important;
 }
 
 h1:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif),
@@ -20,5 +42,5 @@ h3:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif),
 h4:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif),
 h5:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif),
 h6:not(.serif-headline):not(.serif-heading):not(.font-serif):not(.serif) {
-  font-family: 'Inter', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
 }
