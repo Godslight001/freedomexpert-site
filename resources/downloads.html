@@ -44,6 +44,42 @@
         .serif {
             font-family: 'Playfair Display', serif;
         }
+        
+        .vault-shell {
+            background: radial-gradient(circle at top left, rgba(120, 73, 255, 0.18), transparent 28%), radial-gradient(circle at top right, rgba(120, 73, 255, 0.12), transparent 26%), radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.18), transparent 30%), linear-gradient(180deg, #0c0b11 0%, #11111a 100%);
+        }
+        
+        .vault-grid-line {
+            background-image: linear-gradient(rgba(163, 133, 255, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(163, 133, 255, 0.12) 1px, transparent 1px);
+            background-size: 120px 120px;
+            mask-image: radial-gradient(circle at center, black 42%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 42%, transparent 100%);
+        }
+        
+        .vault-card {
+            background: linear-gradient(180deg, rgba(25, 25, 37, 0.96) 0%, rgba(17, 17, 26, 0.96) 100%);
+            border: 1px solid rgba(167, 139, 250, 0.18);
+            box-shadow: 0 20px 60px rgba(5, 4, 14, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        }
+        
+        .vault-tile {
+            background: linear-gradient(180deg, rgba(27, 27, 41, 0.98) 0%, rgba(18, 18, 30, 0.98) 100%);
+            border: 1px solid rgba(167, 139, 250, 0.18);
+            box-shadow: 0 18px 40px rgba(7, 7, 16, 0.38);
+        }
+        
+        .vault-button {
+            background: linear-gradient(180deg, #8b5cf6 0%, #6d28d9 100%);
+            box-shadow: 0 12px 28px rgba(109, 40, 217, 0.35);
+        }
+        
+        .vault-button:hover {
+            background: linear-gradient(180deg, #9d71ff 0%, #7c3aed 100%);
+        }
+        
+        .vault-cover {
+            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.28), transparent 42%), linear-gradient(180deg, #231838 0%, #14111f 100%);
+        }
     </style>
 </head>
 
@@ -95,92 +131,150 @@
         </ul>
     </header>
 
-    <main>
-        <section class="relative overflow-hidden bg-[#111318] text-white">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(111,66,193,0.35),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(197,160,89,0.18),transparent_28%)]"></div>
-            <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-12 lg:py-24">
-                <div class="max-w-3xl">
-                    <span class="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-white/75">Downloads</span>
-                    <h1 class="serif mt-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Personal Books</h1>
-                    <p class="mt-6 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">A dedicated space for books by Simi Uzamere. These titles are being prepared for release here, so they are listed now as part of the FreedomExpert library but are not yet available for download.</p>
-                </div>
-            </div>
-        </section>
+    <main class="vault-shell relative overflow-hidden">
+        <div class="vault-grid-line absolute inset-0 opacity-70"></div>
+        <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#1e1142]/55 to-transparent"></div>
+        <section class="relative mx-auto max-w-7xl px-6 py-16 lg:px-12 lg:py-20">
 
-        <section class="mx-auto max-w-7xl px-6 py-16 lg:px-12 lg:py-20">
-            <div class="mb-12 overflow-hidden rounded-[2rem] border border-primary/10 bg-white shadow-[0_20px_60px_rgba(17,19,24,0.08)]">
-                <div class="grid grid-cols-1 gap-0 lg:grid-cols-[1.1fr_0.9fr]">
-                    <div class="bg-[#f7f3ff] p-8 md:p-10">
-                        <p class="text-xs font-bold uppercase tracking-[0.24em] text-primary">Blog Archive</p>
-                        <h2 class="mt-4 text-3xl font-black tracking-tight text-[#111318] sm:text-4xl">Download all blog posts in one file</h2>
-                        <p class="mt-5 max-w-2xl text-sm leading-8 text-[#616f89]">Get the full blog collection as a Word document for offline reading, review, or printing.</p>
-                    </div>
-                    <div class="flex flex-col justify-center gap-5 p-8 md:p-10">
+            <div class="text-center">
+                <p class="text-xs font-bold uppercase tracking-[0.3em] text-[#c7b8ff]">Resource Hub</p>
+                <h1 class="mt-4 text-4xl font-black uppercase tracking-tight text-white sm:text-5xl lg:text-6xl">FreedomExpert Resource Vault</h1>
+                <p class="mx-auto mt-5 max-w-3xl text-sm leading-8 text-white/68 sm:text-base">A single place for featured publications, downloadable blog collections, financial tools, and reflective audio resources you can keep offline.</p>
+            </div>
+
+            <div class="mt-12 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+                <section class="vault-card rounded-[2rem] p-6 lg:p-7">
+                    <div class="flex items-center justify-between gap-4">
                         <div>
-                            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#616f89]">File</p>
-                            <p class="mt-2 text-lg font-semibold text-[#111318]">New Blogs 1.docx</p>
+                            <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-[#b79cff]">Featured Publications</p>
+                            <h2 class="mt-2 text-xl font-bold text-white">Books by Simi Uzamere</h2>
                         </div>
-                        <div class="flex flex-wrap items-center gap-4">
-                            <a href="../assets/New%20Blogs%201.docx" download class="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-bold text-white transition-all hover:bg-primary/90 shadow-sm">
-                                Download
-                            </a>
-                            <span class="text-sm text-[#616f89]">Word document format</span>
-                        </div>
+                        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Books</span>
                     </div>
-                </div>
-            </div>
 
-            <div class="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-                <div>
-                    <p class="text-xs font-bold uppercase tracking-[0.24em] text-primary">Featured Collection</p>
-                    <h2 class="mt-3 text-3xl font-black tracking-tight text-[#111318]">Current Personal Titles</h2>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                <article class="group overflow-hidden rounded-[2rem] border border-primary/10 bg-white shadow-[0_20px_60px_rgba(17,19,24,0.08)] transition-transform duration-300 hover:-translate-y-1">
-                    <div class="grid grid-cols-1 md:grid-cols-[260px,1fr]">
-                        <div class="bg-[#f7f3ff] p-6 md:p-8">
-                            <div class="mx-auto aspect-[2/3] max-w-[220px] overflow-hidden rounded-2xl bg-white shadow-xl shadow-primary/10">
-                                <img src="../assets/images/books/built-to-last-simi-uzamere.jpg" alt="Built to Last book cover" class="h-full w-full object-cover">
+                    <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                        <article class="vault-tile rounded-[1.6rem] p-4">
+                            <div class="vault-cover mx-auto aspect-[2/3] max-w-[170px] overflow-hidden rounded-[1.35rem] border border-white/10 p-3 shadow-[0_18px_35px_rgba(0,0,0,0.35)]">
+                                <img src="../assets/images/Title 1.jpg" alt="Built to Last book cover" class="h-full w-full rounded-[1rem] object-cover">
                             </div>
-                        </div>
-                        <div class="flex flex-col justify-between p-8 md:p-10">
+                            <div class="mt-5 text-center">
+                                <h3 class="text-lg font-bold text-white">Built to Last</h3>
+                                <p class="mt-2 text-sm leading-6 text-white/60">Strategic leadership and relational prowess through the chapters of Nehemiah.</p>
+                                <span class="mt-4 inline-flex rounded-full border border-amber-300/25 bg-amber-300/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-amber-200">Download PDF</span>
+                            </div>
+                        </article>
+
+                        <article class="vault-tile rounded-[1.6rem] p-4">
+                            <div class="vault-cover mx-auto aspect-[2/3] max-w-[170px] overflow-hidden rounded-[1.35rem] border border-white/10 p-3 shadow-[0_18px_35px_rgba(0,0,0,0.35)]">
+                                <img src="../assets/images/Title 2.jpg" alt="The Mandate of Origins book cover" class="h-full w-full rounded-[1rem] object-cover">
+                            </div>
+                            <div class="mt-5 text-center">
+                                <h3 class="text-lg font-bold text-white">The Mandate of Origins</h3>
+                                <p class="mt-2 text-sm leading-6 text-white/60">A work on identity, beginnings, and the Genesis of the co-creator.</p>
+                                <span class="mt-4 inline-flex rounded-full border border-amber-300/25 bg-amber-300/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-amber-200">Download PDF</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <div class="grid gap-6">
+                    <section class="vault-card rounded-[2rem] p-6 lg:p-7">
+                        <div class="flex items-start justify-between gap-4">
                             <div>
-                                <span class="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-primary">Title 1</span>
-                                <h3 class="mt-5 text-3xl font-black tracking-tight text-[#111318]">Built to Last</h3>
-                                <p class="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#616f89]">Simi Uzamere</p>
-                                <p class="mt-6 text-sm leading-7 text-[#616f89]">Strategic leadership and relational strength through the chapters of Nehemiah. This title is listed here as part of the personal books collection and will be made downloadable later.</p>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-[#b79cff]">Knowledge &amp; Insight</p>
+                                <h2 class="mt-2 text-xl font-bold text-white">Blog Collection</h2>
                             </div>
-                            <div class="mt-8 flex flex-wrap items-center gap-4">
-                                <span class="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-amber-700">Coming Soon</span>
-                                <span class="text-sm text-[#616f89]">Download not yet available</span>
+                            <span class="material-symbols-outlined text-3xl text-[#b79cff]">auto_stories</span>
+                        </div>
+                        <div class="mt-6 rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5">
+                            <p class="text-sm leading-7 text-white/68">Download the full FreedomExpert blog archive as a single Word document for offline study, printing, or review.</p>
+                            <div class="mt-5 flex flex-wrap items-center gap-4">
+                                <a href="../assets/New%20Blogs%201.docx" download class="vault-button inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-bold text-white transition-all">Download All Blog Series</a>
+                                <span class="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">Word Document</span>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </section>
 
-                <article class="group overflow-hidden rounded-[2rem] border border-primary/10 bg-white shadow-[0_20px_60px_rgba(17,19,24,0.08)] transition-transform duration-300 hover:-translate-y-1">
-                    <div class="grid grid-cols-1 md:grid-cols-[260px,1fr]">
-                        <div class="bg-[#f3eefc] p-6 md:p-8">
-                            <div class="mx-auto aspect-[2/3] max-w-[220px] overflow-hidden rounded-2xl bg-white shadow-xl shadow-primary/10">
-                                <img src="../assets/images/books/the-mandate-of-origins-simi-uzamere.jpg" alt="The Mandate of Origins book cover" class="h-full w-full object-cover">
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-between p-8 md:p-10">
+                    <section class="vault-card rounded-[2rem] p-6 lg:p-7">
+                        <div class="flex items-center justify-between gap-4">
                             <div>
-                                <span class="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-primary">Title 2</span>
-                                <h3 class="mt-5 text-3xl font-black tracking-tight text-[#111318]">The Mandate of Origins</h3>
-                                <p class="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#616f89]">Simi Uzamere</p>
-                                <p class="mt-6 text-sm leading-7 text-[#616f89]">A work on identity, beginnings, and the Genesis of the co-creator. It is presented here as part of the personal books shelf ahead of download release.</p>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-[#b79cff]">Specialized Financial Tools</p>
+                                <h2 class="mt-2 text-xl font-bold text-white">Excel &amp; PDF Downloads</h2>
                             </div>
-                            <div class="mt-8 flex flex-wrap items-center gap-4">
-                                <span class="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-amber-700">Coming Soon</span>
-                                <span class="text-sm text-[#616f89]">Download not yet available</span>
-                            </div>
+                            <span class="material-symbols-outlined text-3xl text-[#b79cff]">finance_mode</span>
                         </div>
-                    </div>
-                </article>
+
+                        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                            <article class="vault-tile rounded-[1.4rem] p-4">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-400/12 text-emerald-300">
+                                        <span class="material-symbols-outlined text-3xl">table_chart</span>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <h3 class="text-sm font-bold text-white">Personal Financial Sovereignty Tracker</h3>
+                                        <p class="mt-2 text-xs leading-6 text-white/58">Budget and cash-flow planning worksheet.</p>
+                                    </div>
+                                </div>
+                                <a href="../assets/downloads/BUDGET-TEMPLATE-CASH-FLOW-CALCULATOR%20(1).xlsx" download class="mt-5 inline-flex items-center rounded-xl bg-emerald-400/15 px-4 py-2 text-xs font-bold text-emerald-200 transition-colors hover:bg-emerald-400/20">Download .xlsx</a>
+                            </article>
+
+                            <article class="vault-tile rounded-[1.4rem] p-4">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-sky-400/12 text-sky-300">
+                                        <span class="material-symbols-outlined text-3xl">description</span>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <h3 class="text-sm font-bold text-white">Strategic Investment Profile Template</h3>
+                                        <p class="mt-2 text-xs leading-6 text-white/58">Business plan and franchise financing proposal template.</p>
+                                    </div>
+                                </div>
+                                <a href="../assets/downloads/BUSINESS-PLAN-AND-FRANCHISE-FINANCING-PROPOSAL-TEMPLATE-ONLY%20(1).pdf" download class="mt-5 inline-flex items-center rounded-xl bg-sky-400/15 px-4 py-2 text-xs font-bold text-sky-200 transition-colors hover:bg-sky-400/20">Download .pdf</a>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="vault-card rounded-[2rem] p-6 lg:p-7">
+                        <div class="flex items-center justify-between gap-4">
+                            <div>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-[#b79cff]">Auditory Environment</p>
+                                <h2 class="mt-2 text-xl font-bold text-white">Music Players</h2>
+                            </div>
+                            <span class="material-symbols-outlined text-3xl text-[#b79cff]">music_note</span>
+                        </div>
+
+                        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                            <article class="vault-tile rounded-[1.4rem] p-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#8b5cf6]/35 bg-[#8b5cf6]/10 text-[#d7c7ff]">
+                                        <span class="material-symbols-outlined text-3xl">play_arrow</span>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <h3 class="text-sm font-bold text-white">Deep Work &amp; Strategic Focus</h3>
+                                        <p class="mt-1 text-xs text-white/52">Christian Hymn of Thanksgiving</p>
+                                    </div>
+                                </div>
+                                <audio class="mt-4 w-full" controls preload="none">
+                                    <source src="../assets/downloads/christian-hymn-of-thanksgiving-227149.mp3" type="audio/mpeg">
+                                </audio>
+                            </article>
+
+                            <article class="vault-tile rounded-[1.4rem] p-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#8b5cf6]/35 bg-[#8b5cf6]/10 text-[#d7c7ff]">
+                                        <span class="material-symbols-outlined text-3xl">graphic_eq</span>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <h3 class="text-sm font-bold text-white">Spiritual Alignment &amp; Reflection</h3>
+                                        <p class="mt-1 text-xs text-white/52">In Christ Alone</p>
+                                    </div>
+                                </div>
+                                <audio class="mt-4 w-full" controls preload="none">
+                                    <source src="../assets/downloads/Michael-W-Smith-In-Christ-Alone.mp3" type="audio/mpeg">
+                                </audio>
+                            </article>
+                        </div>
+                    </section>
+                </div>
             </div>
         </section>
     </main>
