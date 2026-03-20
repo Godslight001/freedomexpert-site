@@ -220,10 +220,16 @@
                 <div class="mx-auto max-w-4xl text-center">
                     <h2 class="text-3xl font-black tracking-tight text-[#111318] lg:text-4xl">Weekly Wisdom in Your In-box</h2>
                     <p class="mt-4 text-lg text-[#616f89]">Join members receiving faith-centered financial advice and personal development strategies.</p>
-                    <form class="mt-10 flex flex-col gap-3 md:flex-row md:justify-center">
-                        <input class="h-14 w-full rounded-lg border-none bg-white px-6 text-base shadow-sm focus:ring-2 focus:ring-primary/20 md:w-96" placeholder="Enter your email address" type="email" />
-                        <button class="h-14 rounded-lg bg-primary px-10 text-base font-bold text-white transition-all hover:bg-primary/90 hover:shadow-lg shadow-primary/20" type="button">Subscribe</button>
+                    <form class="mt-10 flex flex-col gap-3 md:flex-row md:justify-center" action="../form-handler.php" method="post">
+                        <input type="hidden" name="form_id" value="blog-newsletter">
+                        <input type="hidden" name="form_type" value="newsletter">
+                        <input type="hidden" name="source_page" value="Blog">
+                        <input type="hidden" name="return_url" value="resources/blog.html">
+                        <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+                        <input class="h-14 w-full rounded-lg border-none bg-white px-6 text-base shadow-sm focus:ring-2 focus:ring-primary/20 md:w-96" placeholder="Enter your email address" type="email" name="email" required />
+                        <button class="h-14 rounded-lg bg-primary px-10 text-base font-bold text-white transition-all hover:bg-primary/90 hover:shadow-lg shadow-primary/20" type="submit">Subscribe</button>
                     </form>
+                    <div data-form-feedback="blog-newsletter" class="hidden mt-4 rounded-lg border px-4 py-3 text-sm font-medium"></div>
                     <p class="mt-4 text-xs text-[#a0a8b5]">No spam. Unsubscribe at any time.</p>
                 </div>
             </section>

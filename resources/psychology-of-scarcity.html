@@ -230,10 +230,16 @@
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-white mb-4">Join the Stewardship Circle</h2>
             <p class="text-gray-400 mb-8 max-w-md mx-auto">Get weekly faith-based financial insights delivered straight to your inbox.</p>
-            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input class="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Email address" type="email" />
-                <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors" type="button">Subscribe</button>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" action="../form-handler.php" method="post">
+                <input type="hidden" name="form_id" value="psychology-scarcity-newsletter">
+                <input type="hidden" name="form_type" value="newsletter">
+                <input type="hidden" name="source_page" value="The Psychology of Scarcity">
+                <input type="hidden" name="return_url" value="resources/psychology-of-scarcity.html">
+                <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+                <input class="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Email address" type="email" name="email" required />
+                <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors" type="submit">Subscribe</button>
             </form>
+            <div data-form-feedback="psychology-scarcity-newsletter" class="hidden mt-4 rounded-lg border px-4 py-3 text-sm font-medium"></div>
         </div>
     </section>
     <section class="max-w-7xl mx-auto px-6 py-20">

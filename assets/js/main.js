@@ -343,5 +343,31 @@
       '</a>';
     }).join('');
   }
+
+  var queryParams = new URLSearchParams(window.location.search);
+  var formStatus = queryParams.get('form_status');
+  var formId = queryParams.get('form_id');
+  var formMessage = queryParams.get('form_message');
+
+  if (formStatus && formId) {
+    var feedbackNode = document.querySelector('[data-form-feedback="' + formId + '"]');
+    if (feedbackNode) {
+      feedbackNode.textContent = formMessage || (formStatus === 'success'
+        ? 'Your submission has been received.'
+        : 'We could not process your submission.');
+      feedbackNode.classList.remove('hidden');
+      feedbackNode.classList.toggle('bg-emerald-50', formStatus === 'success');
+      feedbackNode.classList.toggle('border-emerald-200', formStatus === 'success');
+      feedbackNode.classList.toggle('text-emerald-700', formStatus === 'success');
+      feedbackNode.classList.toggle('bg-red-50', formStatus !== 'success');
+      feedbackNode.classList.toggle('border-red-200', formStatus !== 'success');
+      feedbackNode.classList.toggle('text-red-700', formStatus !== 'success');
+      feedbackNode.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+      }
+    }
+  }
 })();
 

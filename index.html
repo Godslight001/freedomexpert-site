@@ -290,20 +290,26 @@
                     <h2 class="serif-headline text-4xl md:text-6xl text-white mb-6">Architect your next level of purpose</h2>
                     <p class="text-xl text-white/60">Are you ready to build a life of alignment, stewardship, and generational influence?</p>
                 </div>
-                <form class="bg-white/5 backdrop-blur-md p-8 md:p-12 border border-white/10 rounded-lg">
+                <form class="bg-white/5 backdrop-blur-md p-8 md:p-12 border border-white/10 rounded-lg" action="form-handler.php" method="post">
+                    <input type="hidden" name="form_id" value="home-application">
+                    <input type="hidden" name="form_type" value="application">
+                    <input type="hidden" name="source_page" value="Home">
+                    <input type="hidden" name="return_url" value="index.html">
+                    <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+                    <div data-form-feedback="home-application" class="hidden mb-6 rounded-lg border px-4 py-3 text-sm font-medium"></div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div>
                             <label class="block text-xs uppercase tracking-widest text-accent-gold mb-2">Name</label>
-                            <input class="w-full bg-transparent border-b border-white/20 focus:border-accent-gold text-white focus:ring-0 px-0 py-3 transition-slow placeholder:text-white/30" placeholder="John Doe" type="text">
+                            <input class="w-full bg-transparent border-b border-white/20 focus:border-accent-gold text-white focus:ring-0 px-0 py-3 transition-slow placeholder:text-white/30" placeholder="John Doe" type="text" name="name" required>
                         </div>
                         <div>
                             <label class="block text-xs uppercase tracking-widest text-accent-gold mb-2">Email</label>
-                            <input class="w-full bg-transparent border-b border-white/20 focus:border-accent-gold text-white focus:ring-0 px-0 py-3 transition-slow placeholder:text-white/30" placeholder="john@example.com" type="email">
+                            <input class="w-full bg-transparent border-b border-white/20 focus:border-accent-gold text-white focus:ring-0 px-0 py-3 transition-slow placeholder:text-white/30" placeholder="john@example.com" type="email" name="email" required>
                         </div>
                     </div>
                     <div class="mb-8">
                         <label class="block text-xs uppercase tracking-widest text-accent-gold mb-2">Brief Inquiry</label>
-                        <textarea class="w-full bg-transparent border-b border-white/20 focus:border-accent-gold text-white focus:ring-0 px-0 py-3 transition-slow placeholder:text-white/30" placeholder="How can FreedomExpert help you build with clarity and purpose?" rows="4"></textarea>
+                        <textarea class="w-full bg-transparent border-b border-white/20 focus:border-accent-gold text-white focus:ring-0 px-0 py-3 transition-slow placeholder:text-white/30" placeholder="How can FreedomExpert help you build with clarity and purpose?" rows="4" name="message" required></textarea>
                     </div>
                     <button class="w-full bg-accent-gold py-5 text-background-dark font-bold uppercase tracking-widest hover:bg-white transition-slow shadow-lg" type="submit">Submit Application</button>
                 </form>
