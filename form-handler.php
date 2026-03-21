@@ -2,6 +2,12 @@
 
 $config = require __DIR__ . '/mail-config.php';
 
+function log_form_error(string $message): void
+{
+    $logLine = '[' . date('Y-m-d H:i:s') . '] ' . $message . PHP_EOL;
+    @file_put_contents(__DIR__ . '/form-handler.log', $logLine, FILE_APPEND);
+}
+
 function build_redirect_url(string $returnUrl, string $status, string $formId, string $message): string
 {
     $separator = str_contains($returnUrl, '?') ? '&' : '?';
@@ -217,5 +223,6 @@ try {
 
     redirect_back($returnUrl, 'success', $formId, $successMessage);
 } catch (Throwable $exception) {
+    log_form_error($exception->getMessage());
     redirect_back($returnUrl, 'error', $formId, 'We could not send your message right now. Please try again in a moment.');
 }

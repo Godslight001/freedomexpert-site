@@ -92,7 +92,7 @@ $programFooter = @'
                 <div class="col-span-1">
                     <h5 class="text-charcoal font-bold text-sm uppercase tracking-widest mb-6">Platform</h5>
                     <ul class="space-y-4">
-                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../resources/podcast.html">Curriculum</a></li>
+                        <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../programs/index.html">Curriculum</a></li>
                         <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../resources/podcast.html">Podcasts</a></li>
                         <li><a class="text-charcoal/60 text-sm hover:text-primary transition-colors" href="../resources/blog.html">Blog</a></li>
                     </ul>
@@ -132,10 +132,10 @@ foreach ($file in $files) {
     $content = Get-Content -Raw -Path $file.FullName
 
     if ($file.DirectoryName -eq $root) {
-        $content = $content.Replace('href="programs/index.html">Curriculum</a>', 'href="resources/podcast.html">Curriculum</a>')
+        $content = $content.Replace('href="resources/podcast.html">Curriculum</a>', 'href="programs/index.html">Curriculum</a>')
     }
     else {
-        $content = $content.Replace('href="../programs/index.html">Curriculum</a>', 'href="../resources/podcast.html">Curriculum</a>')
+        $content = $content.Replace('href="../resources/podcast.html">Curriculum</a>', 'href="../programs/index.html">Curriculum</a>')
     }
 
     $content = $content.Replace($oldSocialWrapper, $newSocialWrapper)
